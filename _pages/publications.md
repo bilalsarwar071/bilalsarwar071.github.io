@@ -5,12 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+## 1. Revolutionizing ICT with AI and ML: A Comprehensive Study of Current Applications and Future Potential
+<p style="text-indent: 25px;"><i>IEIE Transactions on Smart Processing and Computing</i> &nbsp;&nbsp;&nbsp;</p>
+**Authors:** **_Muhammad Bilal Sarwar_**, Ghulam Musa Raza, Muhammad Ali Sarwar and Byung-Seo Kim
