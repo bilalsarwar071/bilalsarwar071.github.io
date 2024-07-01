@@ -8,4 +8,4 @@ redirect_from:
 ---
 
 
-[Download CV Here]('https://bilalsarwar071.github.io/files/CV-M_Bilal_Sarwar.pdf')
+[Download CV Here](https://bilalsarwar071.github.io/files/CV-M_Bilal_Sarwar.pdf)
