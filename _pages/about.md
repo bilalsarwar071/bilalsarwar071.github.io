@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm Muhammad Bilal Sarwar—an **Electrical Engineer** and a budding **Computational Scientist** specializing in Applied Computer Science. I'm currently pursuing my Master's degree from the prestigious National [National University of Sciences and Technology (NUST)](https://www.nust.edu.pk/), Islamabad, with a keen interest in **Formal Methods**, **Machine Learning**, **Deep Learning**, **AI Safety**, and **Autonomous Systems**. My master's thesis is **"Formal Analysis of Path Planning for Autonomous Vehicles Using Probabilistic Model Checking"**.
+I'm Muhammad Bilal Sarwar—an **Electrical Engineer** and a budding **Computational Scientist** specializing in Applied Computer Science. I'm currently pursuing my Master's degree from the prestigious National [National University of Sciences and Technology (NUST)](https://www.nust.edu.pk/), Islamabad, with a keen interest in **Formal Methods**, **Machine Learning**, **Deep Learning**, **AI Safety**, and **Autonomous Systems**. My master's thesis is **"Formal Analysis of Lane-Changing Algorithms for Autonomous Vehicles Using Probabilistic Model Checking"**.
 
 My academic journey began at [UET Taxila](https://web.uettaxila.edu.pk/), where I completed my Bachelor's degree in Electrical Engineering with extended majors in Signal Processing and Communications in 2021. This foundational knowledge has played an instrumental role in shaping my perspective on applied sciences and building a strong understanding of core engineering principles.
 
