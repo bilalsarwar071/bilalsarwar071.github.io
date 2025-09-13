@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects | Muhammad Bilal Sarwar</title><link>https://example.com/project/</link><atom:link href="https://example.com/project/index.xml" rel="self" type="application/rss+xml"/><description>Projects</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate><image><url>https://example.com/media/icon_hu_645fa481986063ef.png</url><title>Projects</title><link>https://example.com/project/</link></image><item><title>Text Categorization Using Encoder only Transformer</title><link>https://example.com/project/text-classification/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://example.com/project/text-classification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
+&lt;em>Dec 2023 - Jan 2024&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>For the Text Categorization project, I developed a robust system for automatically categorizing textual data into predefined categories. This project involved the implementation of machine learning techniques, with a specific focus on utilizing transformers for enhanced performance in natural language processing tasks.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Implemented a state-of-the-art text categorization model using transformer-based architectures.&lt;/li>
+&lt;li>Explored and leveraged transformer models such as BERT or GPT for improved understanding of contextual information in text.&lt;/li>
+&lt;li>Conducted thorough evaluation and fine-tuning of the model for optimal performance in categorizing diverse text data.&lt;/li>
+&lt;li>Integrated the solution in Python, utilizing transformers and NLP libraries such as Hugging Face Transformers and scikit-learn.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Python&lt;/li>
+&lt;li>Natural Language Processing (NLP)&lt;/li>
+&lt;li>Transformers&lt;/li>
+&lt;li>Text Classification&lt;/li>
+&lt;li>Machine Learning&lt;/li>
+&lt;/ul></description></item><item><title>Sentiment Analysis Using BERT</title><link>https://example.com/project/sentiment-analysis/</link><pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate><guid>https://example.com/project/sentiment-analysis/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
+&lt;em>Oct 2023 - Dec 2023&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>In this project, I implemented a Sentiment Analysis model using BERT (Bidirectional Encoder Representations from Transformers). BERT is a powerful natural language processing (NLP) model that captures contextual information, enabling more accurate sentiment analysis.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Developed a sentiment analysis model using state-of-the-art BERT architecture.&lt;/li>
+&lt;li>Utilized pre-trained BERT models for transfer learning to enhance model performance.&lt;/li>
+&lt;li>Conducted extensive data preprocessing to prepare text data for model training.&lt;/li>
+&lt;li>Implemented the model in Python, leveraging popular NLP libraries such as Transformers and TensorFlow.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Python&lt;/li>
+&lt;li>Natural Language Processing (NLP)&lt;/li>
+&lt;li>BERT&lt;/li>
+&lt;li>Machine Learning&lt;/li>
+&lt;li>Data Preprocessing&lt;/li>
+&lt;/ul></description></item><item><title>Car Price Prediction Using Machine Learning Techniques</title><link>https://example.com/project/car-price/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://example.com/project/car-price/</guid><description>&lt;p>In this project, I made a significant contribution to the development of a machine-learning model that is capable of predicting car prices based on a multitude of features.&lt;/p></description></item></channel></rss>

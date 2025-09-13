@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Transformers | Muhammad Bilal Sarwar</title><link>https://example.com/tags/transformers/</link><atom:link href="https://example.com/tags/transformers/index.xml" rel="self" type="application/rss+xml"/><description>Transformers</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate><image><url>https://example.com/media/icon_hu_645fa481986063ef.png</url><title>Transformers</title><link>https://example.com/tags/transformers/</link></image><item><title>Text Categorization Using Encoder only Transformer</title><link>https://example.com/project/text-classification/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://example.com/project/text-classification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
+&lt;em>Dec 2023 - Jan 2024&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>For the Text Categorization project, I developed a robust system for automatically categorizing textual data into predefined categories. This project involved the implementation of machine learning techniques, with a specific focus on utilizing transformers for enhanced performance in natural language processing tasks.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Implemented a state-of-the-art text categorization model using transformer-based architectures.&lt;/li>
+&lt;li>Explored and leveraged transformer models such as BERT or GPT for improved understanding of contextual information in text.&lt;/li>
+&lt;li>Conducted thorough evaluation and fine-tuning of the model for optimal performance in categorizing diverse text data.&lt;/li>
+&lt;li>Integrated the solution in Python, utilizing transformers and NLP libraries such as Hugging Face Transformers and scikit-learn.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Python&lt;/li>
+&lt;li>Natural Language Processing (NLP)&lt;/li>
+&lt;li>Transformers&lt;/li>
+&lt;li>Text Classification&lt;/li>
+&lt;li>Machine Learning&lt;/li>
+&lt;/ul></description></item></channel></rss>
