@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/</link><atom:link href="https://bilalsarwar071.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Muhammad Bilal Sarwar</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_645fa481986063ef.png</url><title>Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/</link></image><item><title>Example Talk</title><link>https://bilalsarwar071.github.io/event/example/</link><pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/event/example/</guid><description>&lt;div class="flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/</link><atom:link href="https://bilalsarwar071.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Muhammad Bilal Sarwar</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_884d440ecc0a4bd0.png</url><title>Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/</link></image><item><title>Example Talk</title><link>https://bilalsarwar071.github.io/event/example/</link><pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/event/example/</guid><description>&lt;div class="flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900">
 &lt;span class="pr-3 pt-1 text-primary-600 dark:text-primary-300">
 &lt;svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">&lt;path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/>&lt;/svg>
 &lt;/span>
@@ -10,17 +10,252 @@
 &lt;li>&lt;strong>Upload&lt;/strong> an existing slide deck to &lt;code>static/&lt;/code> and link using &lt;code>url_slides&lt;/code> parameter in the front matter of the talk file&lt;/li>
 &lt;li>&lt;strong>Embed&lt;/strong> your slides (e.g. Google Slides) or presentation video on this page using &lt;a href="https://docs.hugoblox.com/reference/markdown/" target="_blank" rel="noopener">shortcodes&lt;/a>.&lt;/li>
 &lt;/ul>
-&lt;p>Further event details, including &lt;a href="https://docs.hugoblox.com/reference/markdown/" target="_blank" rel="noopener">page elements&lt;/a> such as image galleries, can be added to the body of this page.&lt;/p></description></item><item><title/><link>https://bilalsarwar071.github.io/publication/papers/</link><pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/publication/papers/</guid><description/></item><item><title>Revolutionizing ICT with AI and ML: A Comprehensive Study of Current Applications and Future Potential</title><link>https://bilalsarwar071.github.io/publication/journal-article/</link><pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/publication/journal-article/</guid><description/></item><item><title>Projects</title><link>https://bilalsarwar071.github.io/projects/</link><pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/projects/</guid><description/></item><item><title>Text Categorization Using Encoder only Transformer</title><link>https://bilalsarwar071.github.io/project/text-classification/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/text-classification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>Further event details, including &lt;a href="https://docs.hugoblox.com/reference/markdown/" target="_blank" rel="noopener">page elements&lt;/a> such as image galleries, can be added to the body of this page.&lt;/p></description></item><item><title>Interactive Formal Verification Lab</title><link>https://bilalsarwar071.github.io/playground/</link><pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/playground/</guid><description>&lt;p>Welcome to the &lt;strong>Interactive Formal Verification Lab&lt;/strong>! This space is designed to help you visually explore and interact with core mathematical concepts underpinning formal methods, automated reasoning, and computer-aided verification.&lt;/p>
+&lt;p>Formal verification plays a critical role in high-integrity systems, from flight controllers and medical equipment to security-critical smart contracts and hardware designs. Below, you will find three interactive labs focusing on different facets of verification.&lt;/p>
+&lt;hr>
+&lt;link rel="stylesheet" href="https://bilalsarwar071.github.io/css/fv_playground.css">
+&lt;div class="fv-playground-wrapper">
+&lt;div class="fv-tabs">
+&lt;button class="fv-tab-btn active" onclick="switchFvTab(event, 'sat-solver')">
+&lt;span class="tab-icon">⚡&lt;/span> DPLL SAT Solver
+&lt;/button>
+&lt;button class="fv-tab-btn" onclick="switchFvTab(event, 'model-checker')">
+&lt;span class="tab-icon">🛡️&lt;/span> CTL Model Checker
+&lt;/button>
+&lt;button class="fv-tab-btn" onclick="switchFvTab(event, 'hoare-logic')">
+&lt;span class="tab-icon">🔍&lt;/span> Hoare Logic Verifier
+&lt;/button>
+&lt;/div>
+&lt;div class="fv-card">
+&lt;div id="sat-solver" class="fv-tab-content active">
+&lt;div class="fv-grid">
+&lt;div class="fv-control-panel">
+&lt;h3 class="panel-title">Solver Controls&lt;/h3>
+&lt;div class="form-group">
+&lt;label for="sat-presets">Preset Formula&lt;/label>
+&lt;select id="sat-presets" onchange="loadSatPreset()">
+&lt;option value="sat-simple">Satisfiable: (A ∨ B) ∧ (¬A ∨ C) ∧ (¬B ∨ ¬C)&lt;/option>
+&lt;option value="unsat-simple">Unsatisfiable: (A ∨ B) ∧ (¬A ∨ B) ∧ (A ∨ ¬B) ∧ (¬A ∨ ¬B)&lt;/option>
+&lt;option value="php-2">Pigeonhole Principle (PHP 2 to 1 - UNSAT)&lt;/option>
+&lt;option value="zebra-mini">Logic Puzzle (A ∧ (¬A ∨ B) ∧ (¬B ∨ C) ∧ ¬C)&lt;/option>
+&lt;option value="custom">Custom CNF Formula&lt;/option>
+&lt;/select>
+&lt;/div>
+&lt;div id="sat-custom-container" class="form-group hidden animate-fade-in">
+&lt;label for="sat-custom-input">Custom Formula (CNF format, e.g., (A | B) &amp; (~A | C))&lt;/label>
+&lt;input type="text" id="sat-custom-input" placeholder="(A | B) &amp; (~A | C) &amp; (~B | ~C)"
+oninput="parseCustomSat()">
+&lt;div id="sat-parse-error" class="error-text">&lt;/div>
+&lt;/div>
+&lt;div class="control-buttons">
+&lt;button class="btn btn-primary" id="btn-sat-solve" onclick="runSatSolver()">Solve&lt;/button>
+&lt;button class="btn btn-secondary" id="btn-sat-step" onclick="stepSatSolver()">Step&lt;/button>
+&lt;button class="btn btn-accent" id="btn-sat-run" onclick="toggleSatAutoRun()">Auto Run&lt;/button>
+&lt;button class="btn btn-danger" id="btn-sat-reset" onclick="resetSatSolver()">Reset&lt;/button>
+&lt;/div>
+&lt;div class="speed-control">
+&lt;label for="sat-speed">Execution Speed&lt;/label>
+&lt;input type="range" id="sat-speed" min="100" max="2000" value="800" step="100">
+&lt;span class="speed-label">800ms&lt;/span>
+&lt;/div>
+&lt;div class="assignment-panel">
+&lt;h4 class="sub-panel-title">Variable Assignments&lt;/h4>
+&lt;div id="sat-assignments" class="assignment-list">
+&lt;span class="placeholder-text">No active assignments.&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;div class="console-panel">
+&lt;h4 class="sub-panel-title">Solver Trace Logs&lt;/h4>
+&lt;div id="sat-logs" class="console-log">
+&lt;span class="log-info">Ready to solve. Choose a preset or click Step.&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="fv-visual-panel">
+&lt;div class="panel-header-toolbar">
+&lt;span class="panel-subtitle">Formula &amp; Decision Search Tree&lt;/span>
+&lt;span id="sat-status" class="badge badge-neutral">IDLE&lt;/span>
+&lt;/div>
+&lt;div class="formula-container">
+&lt;h4 class="sub-panel-title">CNF Representation&lt;/h4>
+&lt;div id="sat-formula-clauses" class="clause-box">
+&lt;/div>
+&lt;/div>
+&lt;div class="tree-container">
+&lt;h4 class="sub-panel-title">Decision Tree Visualization&lt;/h4>
+&lt;div class="tree-canvas-wrapper">
+&lt;svg id="sat-tree-svg" width="100%" height="100%" viewBox="0 0 500 320">
+&lt;text x="50%" y="45%" text-anchor="middle" fill="#8898a8" id="tree-placeholder">
+&lt;tspan x="50%" dy="0">Start stepping to visualize&lt;/tspan>
+&lt;tspan x="50%" dy="1.2em">the decision tree.&lt;/tspan>
+&lt;/text>
+&lt;/svg>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div id="model-checker" class="fv-tab-content">
+&lt;div class="fv-grid">
+&lt;div class="fv-control-panel">
+&lt;h3 class="panel-title">Model Verification&lt;/h3>
+&lt;div class="form-group">
+&lt;label for="mc-system">System Model&lt;/label>
+&lt;select id="mc-system" onchange="loadMcSystem()">
+&lt;option value="peterson-correct">Peterson's Mutual Exclusion (Verified)&lt;/option>
+&lt;option value="peterson-buggy">Peterson's Mutex (Faulty - No 'turn' variable)&lt;/option>
+&lt;option value="traffic-light">Traffic Light Controller (Verified Safety)&lt;/option>
+&lt;/select>
+&lt;/div>
+&lt;div class="form-group">
+&lt;label for="mc-property">Property to Verify (CTL)&lt;/label>
+&lt;select id="mc-property">
+&lt;/select>
+&lt;/div>
+&lt;div class="control-buttons">
+&lt;button class="btn btn-primary" id="btn-mc-verify" onclick="runModelChecker()">Verify&lt;/button>
+&lt;button class="btn btn-secondary" id="btn-mc-step" onclick="stepModelChecker()">Step Search&lt;/button>
+&lt;button class="btn btn-accent" id="btn-mc-simulate" onclick="toggleMcSimulation()">Simulate&lt;/button>
+&lt;button class="btn btn-danger" id="btn-mc-reset" onclick="resetModelChecker()">Reset&lt;/button>
+&lt;/div>
+&lt;div class="speed-control">
+&lt;label for="mc-speed">Search Animation Speed&lt;/label>
+&lt;input type="range" id="mc-speed" min="100" max="1500" value="600" step="100">
+&lt;span class="speed-label">600ms&lt;/span>
+&lt;/div>
+&lt;div class="variable-state-panel">
+&lt;h4 class="sub-panel-title">Current State Variables&lt;/h4>
+&lt;div id="mc-state-vars" class="state-variables">
+&lt;span class="placeholder-text">No simulation running.&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;div class="console-panel">
+&lt;h4 class="sub-panel-title">Model Checker Console&lt;/h4>
+&lt;div id="mc-logs" class="console-log">
+&lt;span class="log-info">Load a system model to explore its states.&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="fv-visual-panel">
+&lt;div class="panel-header-toolbar">
+&lt;span class="panel-subtitle">Kripke State Transition Graph&lt;/span>
+&lt;span id="mc-status" class="badge badge-neutral">IDLE&lt;/span>
+&lt;/div>
+&lt;div class="kripke-container">
+&lt;div class="graph-canvas-wrapper">
+&lt;svg id="mc-graph-svg" width="100%" height="100%" viewBox="0 0 550 450">
+&lt;/svg>
+&lt;/div>
+&lt;/div>
+&lt;div class="legend-box">
+&lt;span class="legend-item">&lt;span class="legend-color init-color">&lt;/span> Initial State&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color current-color">&lt;/span> Active State&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color visited-color">&lt;/span> Explored State&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color critical-color">&lt;/span> Critical / Error State&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color counter-color">&lt;/span> Counterexample Path&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div id="hoare-logic" class="fv-tab-content">
+&lt;div class="fv-grid">
+&lt;div class="fv-control-panel">
+&lt;h3 class="panel-title">Program Verification&lt;/h3>
+&lt;div class="form-group">
+&lt;label for="hl-presets">Program Template&lt;/label>
+&lt;select id="hl-presets" onchange="loadHlPreset()">
+&lt;option value="abs-val">Absolute Value (Conditional Branching)&lt;/option>
+&lt;option value="sum-n">Sum of first N integers (Loop Invariants)&lt;/option>
+&lt;option value="int-div">Integer Division (While Loop Correctness)&lt;/option>
+&lt;/select>
+&lt;/div>
+&lt;div class="verification-inputs">
+&lt;div class="form-group">
+&lt;label>Precondition { P }&lt;/label>
+&lt;div id="hl-precondition" class="code-badge-display">&lt;/div>
+&lt;/div>
+&lt;div class="form-group">
+&lt;label>Loop Invariant { I }&lt;/label>
+&lt;div id="hl-invariant-container" class="code-badge-display">
+&lt;/div>
+&lt;/div>
+&lt;div class="form-group">
+&lt;label>Postcondition { Q }&lt;/label>
+&lt;div id="hl-postcondition" class="code-badge-display">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="control-buttons">
+&lt;button class="btn btn-primary" onclick="verifyProgram()">Generate VCs&lt;/button>
+&lt;button class="btn btn-secondary" onclick="stepProgramVerification()">Verify Steps&lt;/button>
+&lt;button class="btn btn-danger" onclick="resetHoareVerifier()">Reset&lt;/button>
+&lt;/div>
+&lt;div class="console-panel">
+&lt;h4 class="sub-panel-title">Weakest Precondition (WP) Trace&lt;/h4>
+&lt;div id="hl-logs" class="console-log">
+&lt;span class="log-info">Select a template and click "Generate VCs" to analyze.&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="fv-visual-panel">
+&lt;div class="panel-header-toolbar">
+&lt;span class="panel-subtitle">Verified Code &amp; SMT Proof Targets&lt;/span>
+&lt;span id="hl-status" class="badge badge-neutral">IDLE&lt;/span>
+&lt;/div>
+&lt;div class="code-verification-grid">
+&lt;div class="code-editor-mock">
+&lt;h4 class="sub-panel-title">Annotated Program Code&lt;/h4>
+&lt;div id="hl-code-display" class="code-lines-box">
+&lt;/div>
+&lt;/div>
+&lt;div class="vc-proof-panel">
+&lt;h4 class="sub-panel-title">Verification Conditions (VCs)&lt;/h4>
+&lt;div id="hl-vc-list" class="vc-list-box">
+&lt;span class="placeholder-text">VCs will appear here after calculation.&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;script src="https://bilalsarwar071.github.io/js/fv_playground.js">&lt;/script>
+&lt;hr>
+&lt;h2 id="what-is-formal-verification">What is Formal Verification?&lt;/h2>
+&lt;p>Formal verification is the act of proving or disproving the correctness of intended algorithms underlying a system with respect to a certain formal specification or property, using formal methods of mathematics. Unlike testing, which shows the presence of bugs under specific inputs, formal verification can prove the &lt;strong>absence of bugs&lt;/strong> for all possible execution paths and inputs.&lt;/p>
+&lt;h3 id="core-areas-explored-in-this-lab">Core Areas Explored in this Lab:&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>SAT Solving (Propositional Logic)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>How it works:&lt;/strong> SAT solvers check if a boolean formula is satisfiable (i.e., there exists an assignment of variables that makes the formula true).&lt;/li>
+&lt;li>&lt;strong>Why it matters:&lt;/strong> Most verification tasks (like bounded model checking and software verification) are compiled down to SAT/SMT problems. Solvers like Z3 or Yices process billions of variables in industrial applications.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Model Checking (Temporal Logic &amp;amp; Kripke Structures)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>How it works:&lt;/strong> A model checker exhaustively checks all reachable states of a system model to verify whether a specification (written in CTL or LTL) holds.&lt;/li>
+&lt;li>&lt;strong>Why it matters:&lt;/strong> It is widely used to verify concurrent and distributed systems (such as mutual exclusion, cache coherence, or protocols) where testing struggles to hit all interleavings.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Program Verification (Hoare Logic)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>How it works:&lt;/strong> Uses Hoare triples &lt;code>{Precondition} Program {Postcondition}&lt;/code> to verify structural correctness. It applies verification rules to generate mathematical statements (Verification Conditions) that, when proved, guarantee correctness.&lt;/li>
+&lt;li>&lt;strong>Why it matters:&lt;/strong> It provides the foundation for compiler verification, secure operating systems (like seL4), and safety-critical library correctness.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol></description></item><item><title>Formal Analysis of Lane-Changing Algorithms using Probabilistic Model Checking</title><link>https://bilalsarwar071.github.io/publication/lane-changing-model-checking/</link><pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/publication/lane-changing-model-checking/</guid><description/></item><item><title>Revolutionizing ICT with AI and ML: A Comprehensive Study of Current Applications and Future Potential</title><link>https://bilalsarwar071.github.io/publication/journal-article/</link><pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/publication/journal-article/</guid><description/></item><item><title>Projects</title><link>https://bilalsarwar071.github.io/projects/</link><pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/projects/</guid><description/></item><item><title>Text Categorization Using Encoder only Transformer</title><link>https://bilalsarwar071.github.io/project/text-classification/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/text-classification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
 &lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
 &lt;em>Dec 2023 - Jan 2024&lt;/em>&lt;/p>
 &lt;h2 id="project-description">Project Description&lt;/h2>
-&lt;p>For the Text Categorization project, I developed a robust system for automatically categorizing textual data into predefined categories. This project involved the implementation of machine learning techniques, with a specific focus on utilizing transformers for enhanced performance in natural language processing tasks.&lt;/p>
+&lt;p>The goal here was to sort text into a fixed set of categories automatically. I used an encoder-only transformer, the same family as BERT, because it builds a representation of the whole input, which suits classification well.&lt;/p>
 &lt;h2 id="project-highlights">Project Highlights&lt;/h2>
 &lt;ul>
-&lt;li>Implemented a state-of-the-art text categorization model using transformer-based architectures.&lt;/li>
-&lt;li>Explored and leveraged transformer models such as BERT or GPT for improved understanding of contextual information in text.&lt;/li>
-&lt;li>Conducted thorough evaluation and fine-tuning of the model for optimal performance in categorizing diverse text data.&lt;/li>
-&lt;li>Integrated the solution in Python, utilizing transformers and NLP libraries such as Hugging Face Transformers and scikit-learn.&lt;/li>
+&lt;li>Built a text categorization model on an encoder-only transformer architecture.&lt;/li>
+&lt;li>Evaluated and fine-tuned the model so it categorized a varied mix of text reliably.&lt;/li>
+&lt;li>Implemented everything in Python with Hugging Face Transformers and scikit-learn.&lt;/li>
 &lt;/ul>
 &lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
 &lt;ul>
@@ -106,13 +341,12 @@
 &lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
 &lt;em>Oct 2023 - Dec 2023&lt;/em>&lt;/p>
 &lt;h2 id="project-description">Project Description&lt;/h2>
-&lt;p>In this project, I implemented a Sentiment Analysis model using BERT (Bidirectional Encoder Representations from Transformers). BERT is a powerful natural language processing (NLP) model that captures contextual information, enabling more accurate sentiment analysis.&lt;/p>
+&lt;p>For this project I built a sentiment classifier using BERT (Bidirectional Encoder Representations from Transformers). BERT reads each word in the context of the whole sentence, which matters a lot for sentiment, where a single word like &amp;ldquo;not&amp;rdquo; can flip the meaning.&lt;/p>
 &lt;h2 id="project-highlights">Project Highlights&lt;/h2>
 &lt;ul>
-&lt;li>Developed a sentiment analysis model using state-of-the-art BERT architecture.&lt;/li>
-&lt;li>Utilized pre-trained BERT models for transfer learning to enhance model performance.&lt;/li>
-&lt;li>Conducted extensive data preprocessing to prepare text data for model training.&lt;/li>
-&lt;li>Implemented the model in Python, leveraging popular NLP libraries such as Transformers and TensorFlow.&lt;/li>
+&lt;li>Fine-tuned pre-trained BERT models for sentiment classification instead of training from scratch.&lt;/li>
+&lt;li>Prepared the text data with standard NLP preprocessing before training.&lt;/li>
+&lt;li>Wrote the pipeline in Python using HuggingFace Transformers and TensorFlow.&lt;/li>
 &lt;/ul>
 &lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
 &lt;ul>
@@ -226,7 +460,7 @@ console.log('code block');
 &lt;p>Hugo Blox supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-537468192" class="chart">&lt;/div>
+&lt;div id="chart-185479362" class="chart">&lt;/div>
 &lt;script>
 async function fetchChartJSON() {
 console.debug('Hugo Blox fetching chart JSON...')
@@ -242,7 +476,7 @@ return;
 clearInterval( a );
 fetchChartJSON().then(chart => {
 console.debug('Plotting chart...')
-window.Plotly.newPlot('chart-537468192', chart.data, chart.layout, {responsive: true});
+window.Plotly.newPlot('chart-185479362', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -686,4 +920,33 @@ Parallel 4 : des6, after des4, 1d
 &lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> Do something else&lt;/li>
 &lt;/ul>
-&lt;h2 id="did-you-find-this-page-helpful-consider-sharing-it-">Did you find this page helpful? Consider sharing it 🙌&lt;/h2></description></item><item><title>Car Price Prediction Using Machine Learning Techniques</title><link>https://bilalsarwar071.github.io/project/car-price/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/car-price/</guid><description>&lt;p>In this project, I made a significant contribution to the development of a machine-learning model that is capable of predicting car prices based on a multitude of features.&lt;/p></description></item></channel></rss>
+&lt;h2 id="did-you-find-this-page-helpful-consider-sharing-it-">Did you find this page helpful? Consider sharing it 🙌&lt;/h2></description></item><item><title>Car Price Prediction Using Machine Learning Techniques</title><link>https://bilalsarwar071.github.io/project/car-price/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/car-price/</guid><description>&lt;p>In this project I helped build a machine learning model that predicts the price of a car from a wide range of its features.&lt;/p></description></item><item><title>Multiclass Image Classification using Transfer Learning</title><link>https://bilalsarwar071.github.io/project/image-classification/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/image-classification/</guid><description>&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>I built a multiclass image classifier on top of InceptionResNetV2. Rather than training a large network from scratch, I started from a pre-trained model and reused what it had already learned, then trained it to recognize my own set of classes.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Used InceptionResNetV2 as the base model and adapted it to the target classes through transfer learning.&lt;/li>
+&lt;li>Added data augmentation and input normalization so the model would do better on images it had not seen during training.&lt;/li>
+&lt;li>Wrote the full training and evaluation pipeline in Python.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Python&lt;/li>
+&lt;li>Deep Learning&lt;/li>
+&lt;li>Transfer Learning&lt;/li>
+&lt;li>Computer Vision&lt;/li>
+&lt;li>Data Augmentation&lt;/li>
+&lt;/ul></description></item><item><title>Adaptive Irrigated Agriculture Monitoring (Embedded + Cloud)</title><link>https://bilalsarwar071.github.io/project/irrigation-monitoring/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/irrigation-monitoring/</guid><description>&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>This was an IoT system for keeping track of conditions in the field. Embedded sensor nodes measured soil and air conditions and sent the readings to the cloud in real time, so irrigation could follow what the crop actually needed instead of a fixed schedule.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Built the embedded sensor setup that reads soil and air conditions.&lt;/li>
+&lt;li>Connected the sensor nodes to the cloud for real-time monitoring.&lt;/li>
+&lt;li>Used the incoming data to decide when and how much to irrigate.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Embedded Systems&lt;/li>
+&lt;li>IoT&lt;/li>
+&lt;li>Sensors&lt;/li>
+&lt;li>Cloud Integration&lt;/li>
+&lt;/ul></description></item></channel></rss>

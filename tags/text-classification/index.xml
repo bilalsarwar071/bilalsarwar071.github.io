@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Text Classification | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/tags/text-classification/</link><atom:link href="https://bilalsarwar071.github.io/tags/text-classification/index.xml" rel="self" type="application/rss+xml"/><description>Text Classification</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_645fa481986063ef.png</url><title>Text Classification</title><link>https://bilalsarwar071.github.io/tags/text-classification/</link></image><item><title>Text Categorization Using Encoder only Transformer</title><link>https://bilalsarwar071.github.io/project/text-classification/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/text-classification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Text Classification | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/tags/text-classification/</link><atom:link href="https://bilalsarwar071.github.io/tags/text-classification/index.xml" rel="self" type="application/rss+xml"/><description>Text Classification</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_884d440ecc0a4bd0.png</url><title>Text Classification</title><link>https://bilalsarwar071.github.io/tags/text-classification/</link></image><item><title>Text Categorization Using Encoder only Transformer</title><link>https://bilalsarwar071.github.io/project/text-classification/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/text-classification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
 &lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
 &lt;em>Dec 2023 - Jan 2024&lt;/em>&lt;/p>
 &lt;h2 id="project-description">Project Description&lt;/h2>
-&lt;p>For the Text Categorization project, I developed a robust system for automatically categorizing textual data into predefined categories. This project involved the implementation of machine learning techniques, with a specific focus on utilizing transformers for enhanced performance in natural language processing tasks.&lt;/p>
+&lt;p>The goal here was to sort text into a fixed set of categories automatically. I used an encoder-only transformer, the same family as BERT, because it builds a representation of the whole input, which suits classification well.&lt;/p>
 &lt;h2 id="project-highlights">Project Highlights&lt;/h2>
 &lt;ul>
-&lt;li>Implemented a state-of-the-art text categorization model using transformer-based architectures.&lt;/li>
-&lt;li>Explored and leveraged transformer models such as BERT or GPT for improved understanding of contextual information in text.&lt;/li>
-&lt;li>Conducted thorough evaluation and fine-tuning of the model for optimal performance in categorizing diverse text data.&lt;/li>
-&lt;li>Integrated the solution in Python, utilizing transformers and NLP libraries such as Hugging Face Transformers and scikit-learn.&lt;/li>
+&lt;li>Built a text categorization model on an encoder-only transformer architecture.&lt;/li>
+&lt;li>Evaluated and fine-tuned the model so it categorized a varied mix of text reliably.&lt;/li>
+&lt;li>Implemented everything in Python with Hugging Face Transformers and scikit-learn.&lt;/li>
 &lt;/ul>
 &lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
 &lt;ul>

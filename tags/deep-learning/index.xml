@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Deep Learning | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/tags/deep-learning/</link><atom:link href="https://bilalsarwar071.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml"/><description>Deep Learning</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_645fa481986063ef.png</url><title>Deep Learning</title><link>https://bilalsarwar071.github.io/tags/deep-learning/</link></image><item><title>Text Categorization Using Encoder only Transformer</title><link>https://bilalsarwar071.github.io/project/text-classification/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/text-classification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Deep Learning | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/tags/deep-learning/</link><atom:link href="https://bilalsarwar071.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml"/><description>Deep Learning</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_884d440ecc0a4bd0.png</url><title>Deep Learning</title><link>https://bilalsarwar071.github.io/tags/deep-learning/</link></image><item><title>Text Categorization Using Encoder only Transformer</title><link>https://bilalsarwar071.github.io/project/text-classification/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/text-classification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
 &lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
 &lt;em>Dec 2023 - Jan 2024&lt;/em>&lt;/p>
 &lt;h2 id="project-description">Project Description&lt;/h2>
-&lt;p>For the Text Categorization project, I developed a robust system for automatically categorizing textual data into predefined categories. This project involved the implementation of machine learning techniques, with a specific focus on utilizing transformers for enhanced performance in natural language processing tasks.&lt;/p>
+&lt;p>The goal here was to sort text into a fixed set of categories automatically. I used an encoder-only transformer, the same family as BERT, because it builds a representation of the whole input, which suits classification well.&lt;/p>
 &lt;h2 id="project-highlights">Project Highlights&lt;/h2>
 &lt;ul>
-&lt;li>Implemented a state-of-the-art text categorization model using transformer-based architectures.&lt;/li>
-&lt;li>Explored and leveraged transformer models such as BERT or GPT for improved understanding of contextual information in text.&lt;/li>
-&lt;li>Conducted thorough evaluation and fine-tuning of the model for optimal performance in categorizing diverse text data.&lt;/li>
-&lt;li>Integrated the solution in Python, utilizing transformers and NLP libraries such as Hugging Face Transformers and scikit-learn.&lt;/li>
+&lt;li>Built a text categorization model on an encoder-only transformer architecture.&lt;/li>
+&lt;li>Evaluated and fine-tuned the model so it categorized a varied mix of text reliably.&lt;/li>
+&lt;li>Implemented everything in Python with Hugging Face Transformers and scikit-learn.&lt;/li>
 &lt;/ul>
 &lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
 &lt;ul>
@@ -21,13 +20,12 @@
 &lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
 &lt;em>Oct 2023 - Dec 2023&lt;/em>&lt;/p>
 &lt;h2 id="project-description">Project Description&lt;/h2>
-&lt;p>In this project, I implemented a Sentiment Analysis model using BERT (Bidirectional Encoder Representations from Transformers). BERT is a powerful natural language processing (NLP) model that captures contextual information, enabling more accurate sentiment analysis.&lt;/p>
+&lt;p>For this project I built a sentiment classifier using BERT (Bidirectional Encoder Representations from Transformers). BERT reads each word in the context of the whole sentence, which matters a lot for sentiment, where a single word like &amp;ldquo;not&amp;rdquo; can flip the meaning.&lt;/p>
 &lt;h2 id="project-highlights">Project Highlights&lt;/h2>
 &lt;ul>
-&lt;li>Developed a sentiment analysis model using state-of-the-art BERT architecture.&lt;/li>
-&lt;li>Utilized pre-trained BERT models for transfer learning to enhance model performance.&lt;/li>
-&lt;li>Conducted extensive data preprocessing to prepare text data for model training.&lt;/li>
-&lt;li>Implemented the model in Python, leveraging popular NLP libraries such as Transformers and TensorFlow.&lt;/li>
+&lt;li>Fine-tuned pre-trained BERT models for sentiment classification instead of training from scratch.&lt;/li>
+&lt;li>Prepared the text data with standard NLP preprocessing before training.&lt;/li>
+&lt;li>Wrote the pipeline in Python using HuggingFace Transformers and TensorFlow.&lt;/li>
 &lt;/ul>
 &lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
 &lt;ul>
@@ -36,4 +34,19 @@
 &lt;li>BERT&lt;/li>
 &lt;li>Machine Learning&lt;/li>
 &lt;li>Data Preprocessing&lt;/li>
+&lt;/ul></description></item><item><title>Multiclass Image Classification using Transfer Learning</title><link>https://bilalsarwar071.github.io/project/image-classification/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/image-classification/</guid><description>&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>I built a multiclass image classifier on top of InceptionResNetV2. Rather than training a large network from scratch, I started from a pre-trained model and reused what it had already learned, then trained it to recognize my own set of classes.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Used InceptionResNetV2 as the base model and adapted it to the target classes through transfer learning.&lt;/li>
+&lt;li>Added data augmentation and input normalization so the model would do better on images it had not seen during training.&lt;/li>
+&lt;li>Wrote the full training and evaluation pipeline in Python.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Python&lt;/li>
+&lt;li>Deep Learning&lt;/li>
+&lt;li>Transfer Learning&lt;/li>
+&lt;li>Computer Vision&lt;/li>
+&lt;li>Data Augmentation&lt;/li>
 &lt;/ul></description></item></channel></rss>

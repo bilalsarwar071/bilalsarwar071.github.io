@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Computer Vision | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/tags/computer-vision/</link><atom:link href="https://bilalsarwar071.github.io/tags/computer-vision/index.xml" rel="self" type="application/rss+xml"/><description>Computer Vision</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_884d440ecc0a4bd0.png</url><title>Computer Vision</title><link>https://bilalsarwar071.github.io/tags/computer-vision/</link></image><item><title>Multiclass Image Classification using Transfer Learning</title><link>https://bilalsarwar071.github.io/project/image-classification/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/image-classification/</guid><description>&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>I built a multiclass image classifier on top of InceptionResNetV2. Rather than training a large network from scratch, I started from a pre-trained model and reused what it had already learned, then trained it to recognize my own set of classes.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Used InceptionResNetV2 as the base model and adapted it to the target classes through transfer learning.&lt;/li>
+&lt;li>Added data augmentation and input normalization so the model would do better on images it had not seen during training.&lt;/li>
+&lt;li>Wrote the full training and evaluation pipeline in Python.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Python&lt;/li>
+&lt;li>Deep Learning&lt;/li>
+&lt;li>Transfer Learning&lt;/li>
+&lt;li>Computer Vision&lt;/li>
+&lt;li>Data Augmentation&lt;/li>
+&lt;/ul></description></item></channel></rss>
