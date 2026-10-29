@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/</link><atom:link href="https://bilalsarwar071.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Muhammad Bilal Sarwar</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_884d440ecc0a4bd0.png</url><title>Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/</link></image><item><title>Example Talk</title><link>https://bilalsarwar071.github.io/event/example/</link><pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/event/example/</guid><description>&lt;div class="flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/</link><atom:link href="https://bilalsarwar071.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Muhammad Bilal Sarwar</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_ef8be4a73e75cc6b.png</url><title>Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/</link></image><item><title>Example Talk</title><link>https://bilalsarwar071.github.io/event/example/</link><pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/event/example/</guid><description>&lt;div class="flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900">
 &lt;span class="pr-3 pt-1 text-primary-600 dark:text-primary-300">
 &lt;svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">&lt;path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/>&lt;/svg>
 &lt;/span>
@@ -10,243 +10,220 @@
 &lt;li>&lt;strong>Upload&lt;/strong> an existing slide deck to &lt;code>static/&lt;/code> and link using &lt;code>url_slides&lt;/code> parameter in the front matter of the talk file&lt;/li>
 &lt;li>&lt;strong>Embed&lt;/strong> your slides (e.g. Google Slides) or presentation video on this page using &lt;a href="https://docs.hugoblox.com/reference/markdown/" target="_blank" rel="noopener">shortcodes&lt;/a>.&lt;/li>
 &lt;/ul>
-&lt;p>Further event details, including &lt;a href="https://docs.hugoblox.com/reference/markdown/" target="_blank" rel="noopener">page elements&lt;/a> such as image galleries, can be added to the body of this page.&lt;/p></description></item><item><title>Interactive Formal Verification Lab</title><link>https://bilalsarwar071.github.io/playground/</link><pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/playground/</guid><description>&lt;p>Welcome to the &lt;strong>Interactive Formal Verification Lab&lt;/strong>! This space is designed to help you visually explore and interact with core mathematical concepts underpinning formal methods, automated reasoning, and computer-aided verification.&lt;/p>
-&lt;p>Formal verification plays a critical role in high-integrity systems, from flight controllers and medical equipment to security-critical smart contracts and hardware designs. Below, you will find three interactive labs focusing on different facets of verification.&lt;/p>
-&lt;hr>
-&lt;link rel="stylesheet" href="https://bilalsarwar071.github.io/css/fv_playground.css">
-&lt;div class="fv-playground-wrapper">
-&lt;div class="fv-tabs">
-&lt;button class="fv-tab-btn active" onclick="switchFvTab(event, 'sat-solver')">
+&lt;p>Further event details, including &lt;a href="https://docs.hugoblox.com/reference/markdown/" target="_blank" rel="noopener">page elements&lt;/a> such as image galleries, can be added to the body of this page.&lt;/p></description></item><item><title>Interactive Formal Verification Lab</title><link>https://bilalsarwar071.github.io/playground/</link><pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/playground/</guid><description>&lt;p>I built these three tools to show how some of the ideas I work with actually behave. They are small, but they are real: the model checker explores every reachable state and checks your formula with the standard labelling algorithm, and the verifier computes weakest preconditions for whatever conditions you type in. Everything runs in your browser, so feel free to break things.&lt;/p>
+&lt;link rel="stylesheet" href="https://bilalsarwar071.github.io/css/fv_playground.css?v=e248c122">
+&lt;div class="fv-playground-wrapper not-prose" id="fv-lab">
+&lt;div class="fv-tabs" role="tablist">
+&lt;button type="button" class="fv-tab-btn active" role="tab" aria-selected="true" data-tab="sat-solver">
 &lt;span class="tab-icon">⚡&lt;/span> DPLL SAT Solver
 &lt;/button>
-&lt;button class="fv-tab-btn" onclick="switchFvTab(event, 'model-checker')">
+&lt;button type="button" class="fv-tab-btn" role="tab" aria-selected="false" data-tab="model-checker">
 &lt;span class="tab-icon">🛡️&lt;/span> CTL Model Checker
 &lt;/button>
-&lt;button class="fv-tab-btn" onclick="switchFvTab(event, 'hoare-logic')">
+&lt;button type="button" class="fv-tab-btn" role="tab" aria-selected="false" data-tab="hoare-logic">
 &lt;span class="tab-icon">🔍&lt;/span> Hoare Logic Verifier
 &lt;/button>
 &lt;/div>
 &lt;div class="fv-card">
-&lt;div id="sat-solver" class="fv-tab-content active">
+&lt;div id="sat-solver" class="fv-tab-content active" role="tabpanel">
 &lt;div class="fv-grid">
 &lt;div class="fv-control-panel">
 &lt;h3 class="panel-title">Solver Controls&lt;/h3>
 &lt;div class="form-group">
-&lt;label for="sat-presets">Preset Formula&lt;/label>
-&lt;select id="sat-presets" onchange="loadSatPreset()">
+&lt;label for="sat-presets">Formula&lt;/label>
+&lt;select id="sat-presets">
 &lt;option value="sat-simple">Satisfiable: (A ∨ B) ∧ (¬A ∨ C) ∧ (¬B ∨ ¬C)&lt;/option>
-&lt;option value="unsat-simple">Unsatisfiable: (A ∨ B) ∧ (¬A ∨ B) ∧ (A ∨ ¬B) ∧ (¬A ∨ ¬B)&lt;/option>
-&lt;option value="php-2">Pigeonhole Principle (PHP 2 to 1 - UNSAT)&lt;/option>
-&lt;option value="zebra-mini">Logic Puzzle (A ∧ (¬A ∨ B) ∧ (¬B ∨ C) ∧ ¬C)&lt;/option>
-&lt;option value="custom">Custom CNF Formula&lt;/option>
+&lt;option value="unsat-simple">Unsatisfiable: all four clauses over A and B&lt;/option>
+&lt;option value="chain">Implication chain: refuted by propagation alone&lt;/option>
+&lt;option value="php-3-2">Pigeonhole: 3 pigeons, 2 holes (unsatisfiable)&lt;/option>
+&lt;option value="custom">Write your own CNF formula...&lt;/option>
 &lt;/select>
 &lt;/div>
-&lt;div id="sat-custom-container" class="form-group hidden animate-fade-in">
-&lt;label for="sat-custom-input">Custom Formula (CNF format, e.g., (A | B) &amp; (~A | C))&lt;/label>
-&lt;input type="text" id="sat-custom-input" placeholder="(A | B) &amp; (~A | C) &amp; (~B | ~C)"
-oninput="parseCustomSat()">
+&lt;div id="sat-custom-container" class="form-group hidden">
+&lt;label for="sat-custom-input">Your formula in CNF&lt;/label>
+&lt;input type="text" id="sat-custom-input" class="mono-input" placeholder="(A | B) &amp; (~A | C) &amp; (~B | ~C)" spellcheck="false" autocomplete="off">
+&lt;p class="hint-text">Join clauses with &amp;amp; and literals with |. Negate with ~ or !. Up to 12 variables.&lt;/p>
 &lt;div id="sat-parse-error" class="error-text">&lt;/div>
 &lt;/div>
 &lt;div class="control-buttons">
-&lt;button class="btn btn-primary" id="btn-sat-solve" onclick="runSatSolver()">Solve&lt;/button>
-&lt;button class="btn btn-secondary" id="btn-sat-step" onclick="stepSatSolver()">Step&lt;/button>
-&lt;button class="btn btn-accent" id="btn-sat-run" onclick="toggleSatAutoRun()">Auto Run&lt;/button>
-&lt;button class="btn btn-danger" id="btn-sat-reset" onclick="resetSatSolver()">Reset&lt;/button>
+&lt;button type="button" class="btn btn-primary" id="btn-sat-solve">Solve&lt;/button>
+&lt;button type="button" class="btn btn-secondary" id="btn-sat-step">Step&lt;/button>
+&lt;button type="button" class="btn btn-accent" id="btn-sat-run">Auto run&lt;/button>
+&lt;button type="button" class="btn btn-danger" id="btn-sat-reset">Reset&lt;/button>
 &lt;/div>
 &lt;div class="speed-control">
-&lt;label for="sat-speed">Execution Speed&lt;/label>
-&lt;input type="range" id="sat-speed" min="100" max="2000" value="800" step="100">
-&lt;span class="speed-label">800ms&lt;/span>
+&lt;label for="sat-speed">Auto run speed&lt;/label>
+&lt;input type="range" id="sat-speed" min="100" max="2000" value="700" step="100">
+&lt;span class="speed-label">&lt;/span>
 &lt;/div>
-&lt;div class="assignment-panel">
-&lt;h4 class="sub-panel-title">Variable Assignments&lt;/h4>
-&lt;div id="sat-assignments" class="assignment-list">
-&lt;span class="placeholder-text">No active assignments.&lt;/span>
-&lt;/div>
+&lt;div>
+&lt;h4 class="sub-panel-title">Assignment&lt;/h4>
+&lt;div id="sat-assignments" class="assignment-list">&lt;/div>
 &lt;/div>
 &lt;div class="console-panel">
-&lt;h4 class="sub-panel-title">Solver Trace Logs&lt;/h4>
-&lt;div id="sat-logs" class="console-log">
-&lt;span class="log-info">Ready to solve. Choose a preset or click Step.&lt;/span>
-&lt;/div>
+&lt;h4 class="sub-panel-title">Solver log&lt;/h4>
+&lt;div id="sat-logs" class="console-log" aria-live="polite">&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;div class="fv-visual-panel">
 &lt;div class="panel-header-toolbar">
-&lt;span class="panel-subtitle">Formula &amp; Decision Search Tree&lt;/span>
+&lt;span class="panel-subtitle">Clauses and search tree&lt;/span>
 &lt;span id="sat-status" class="badge badge-neutral">IDLE&lt;/span>
 &lt;/div>
-&lt;div class="formula-container">
-&lt;h4 class="sub-panel-title">CNF Representation&lt;/h4>
-&lt;div id="sat-formula-clauses" class="clause-box">
-&lt;/div>
+&lt;div id="sat-stats" class="stats-row">&lt;/div>
+&lt;div>
+&lt;h4 class="sub-panel-title">Clauses&lt;/h4>
+&lt;div id="sat-formula-clauses" class="clause-box">&lt;/div>
 &lt;/div>
 &lt;div class="tree-container">
-&lt;h4 class="sub-panel-title">Decision Tree Visualization&lt;/h4>
+&lt;h4 class="sub-panel-title">Search tree&lt;/h4>
 &lt;div class="tree-canvas-wrapper">
-&lt;svg id="sat-tree-svg" width="100%" height="100%" viewBox="0 0 500 320">
-&lt;text x="50%" y="45%" text-anchor="middle" fill="#8898a8" id="tree-placeholder">
-&lt;tspan x="50%" dy="0">Start stepping to visualize&lt;/tspan>
-&lt;tspan x="50%" dy="1.2em">the decision tree.&lt;/tspan>
-&lt;/text>
-&lt;/svg>
+&lt;svg id="sat-tree-svg" viewBox="0 0 500 260" preserveAspectRatio="xMidYMin meet" role="img" aria-label="DPLL search tree">&lt;/svg>
+&lt;/div>
+&lt;/div>
+&lt;div class="legend-box">
+&lt;span class="legend-item">&lt;span class="legend-shape legend-circle">&lt;/span> Decision&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-shape legend-diamond">&lt;/span> Forced by unit propagation&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color conflict-color">&lt;/span> Conflict or dead end&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color sat-color">&lt;/span> Satisfying path&lt;/span>
 &lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div>
-&lt;div id="model-checker" class="fv-tab-content">
+&lt;div id="model-checker" class="fv-tab-content" role="tabpanel">
 &lt;div class="fv-grid">
 &lt;div class="fv-control-panel">
-&lt;h3 class="panel-title">Model Verification&lt;/h3>
+&lt;h3 class="panel-title">Model Checking&lt;/h3>
 &lt;div class="form-group">
-&lt;label for="mc-system">System Model&lt;/label>
-&lt;select id="mc-system" onchange="loadMcSystem()">
-&lt;option value="peterson-correct">Peterson's Mutual Exclusion (Verified)&lt;/option>
-&lt;option value="peterson-buggy">Peterson's Mutex (Faulty - No 'turn' variable)&lt;/option>
-&lt;option value="traffic-light">Traffic Light Controller (Verified Safety)&lt;/option>
+&lt;label for="mc-system">System&lt;/label>
+&lt;select id="mc-system">
+&lt;option value="peterson">Peterson's mutual exclusion&lt;/option>
+&lt;option value="flags-only">Flags only, no turn variable&lt;/option>
+&lt;option value="naive-lock">Naive lock: check first, then set&lt;/option>
+&lt;option value="traffic">Traffic light controller&lt;/option>
 &lt;/select>
+&lt;p id="mc-blurb" class="hint-text">&lt;/p>
 &lt;/div>
 &lt;div class="form-group">
-&lt;label for="mc-property">Property to Verify (CTL)&lt;/label>
-&lt;select id="mc-property">
-&lt;/select>
+&lt;label for="mc-property">CTL property&lt;/label>
+&lt;select id="mc-property">&lt;/select>
+&lt;input type="text" id="mc-custom" class="mono-input hidden" spellcheck="false" autocomplete="off" aria-label="Custom CTL formula">
+&lt;div id="mc-error" class="error-text">&lt;/div>
+&lt;details class="syntax-help">
+&lt;summary>Formula syntax&lt;/summary>
+&lt;p>Atoms compare a variable with a value, like &lt;code>pc0 = WAIT&lt;/code> or &lt;code>turn != 1&lt;/code>. Booleans can stand alone, like &lt;code>flag0&lt;/code> or &lt;code>deadlock&lt;/code>.&lt;/p>
+&lt;p>Connectives: &lt;code>!&lt;/code> &lt;code>&amp;amp;&lt;/code> &lt;code>|&lt;/code> &lt;code>-&amp;gt;&lt;/code> &lt;code>&amp;lt;-&amp;gt;&lt;/code>. Temporal operators: &lt;code>AX EX AF EF AG EG&lt;/code>, plus &lt;code>A[p U q]&lt;/code> and &lt;code>E[p U q]&lt;/code>.&lt;/p>
+&lt;/details>
 &lt;/div>
 &lt;div class="control-buttons">
-&lt;button class="btn btn-primary" id="btn-mc-verify" onclick="runModelChecker()">Verify&lt;/button>
-&lt;button class="btn btn-secondary" id="btn-mc-step" onclick="stepModelChecker()">Step Search&lt;/button>
-&lt;button class="btn btn-accent" id="btn-mc-simulate" onclick="toggleMcSimulation()">Simulate&lt;/button>
-&lt;button class="btn btn-danger" id="btn-mc-reset" onclick="resetModelChecker()">Reset&lt;/button>
+&lt;button type="button" class="btn btn-primary" id="btn-mc-verify">Verify&lt;/button>
+&lt;button type="button" class="btn btn-secondary" id="btn-mc-step">Step&lt;/button>
+&lt;button type="button" class="btn btn-accent" id="btn-mc-simulate">Simulate&lt;/button>
+&lt;button type="button" class="btn btn-danger" id="btn-mc-reset">Reset&lt;/button>
 &lt;/div>
 &lt;div class="speed-control">
-&lt;label for="mc-speed">Search Animation Speed&lt;/label>
+&lt;label for="mc-speed">Simulation speed&lt;/label>
 &lt;input type="range" id="mc-speed" min="100" max="1500" value="600" step="100">
-&lt;span class="speed-label">600ms&lt;/span>
+&lt;span class="speed-label">&lt;/span>
 &lt;/div>
-&lt;div class="variable-state-panel">
-&lt;h4 class="sub-panel-title">Current State Variables&lt;/h4>
-&lt;div id="mc-state-vars" class="state-variables">
-&lt;span class="placeholder-text">No simulation running.&lt;/span>
-&lt;/div>
+&lt;div id="mc-verdict" class="verdict-box hidden" aria-live="polite">&lt;/div>
+&lt;div>
+&lt;h4 class="sub-panel-title">Current state: &lt;span id="mc-current-name">S0&lt;/span>&lt;/h4>
+&lt;div id="mc-state-vars" class="state-variables">&lt;/div>
+&lt;div id="mc-moves" class="moves-list">&lt;/div>
 &lt;/div>
 &lt;div class="console-panel">
-&lt;h4 class="sub-panel-title">Model Checker Console&lt;/h4>
-&lt;div id="mc-logs" class="console-log">
-&lt;span class="log-info">Load a system model to explore its states.&lt;/span>
-&lt;/div>
+&lt;h4 class="sub-panel-title">Model checker log&lt;/h4>
+&lt;div id="mc-logs" class="console-log" aria-live="polite">&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;div class="fv-visual-panel">
 &lt;div class="panel-header-toolbar">
-&lt;span class="panel-subtitle">Kripke State Transition Graph&lt;/span>
+&lt;span class="panel-subtitle">Reachable states&lt;/span>
 &lt;span id="mc-status" class="badge badge-neutral">IDLE&lt;/span>
 &lt;/div>
 &lt;div class="kripke-container">
 &lt;div class="graph-canvas-wrapper">
-&lt;svg id="mc-graph-svg" width="100%" height="100%" viewBox="0 0 550 450">
-&lt;/svg>
+&lt;svg id="mc-graph-svg" viewBox="0 0 550 450" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Kripke structure of the selected system">&lt;/svg>
 &lt;/div>
+&lt;p class="hint-text">Hover a state or an arrow for details. Click a state one step away from the current one to move there.&lt;/p>
 &lt;/div>
 &lt;div class="legend-box">
-&lt;span class="legend-item">&lt;span class="legend-color init-color">&lt;/span> Initial State&lt;/span>
-&lt;span class="legend-item">&lt;span class="legend-color current-color">&lt;/span> Active State&lt;/span>
-&lt;span class="legend-item">&lt;span class="legend-color visited-color">&lt;/span> Explored State&lt;/span>
-&lt;span class="legend-item">&lt;span class="legend-color critical-color">&lt;/span> Critical / Error State&lt;/span>
-&lt;span class="legend-item">&lt;span class="legend-color counter-color">&lt;/span> Counterexample Path&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color init-color">&lt;/span> Initial state&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color sat-color">&lt;/span> Satisfies the formula&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color current-color">&lt;/span> Current state&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color counter-color">&lt;/span> Counterexample&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color witness-color">&lt;/span> Witness&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color deadlock-color">&lt;/span> Deadlock&lt;/span>
 &lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;div id="hoare-logic" class="fv-tab-content">
+&lt;div id="hoare-logic" class="fv-tab-content" role="tabpanel">
 &lt;div class="fv-grid">
 &lt;div class="fv-control-panel">
 &lt;h3 class="panel-title">Program Verification&lt;/h3>
 &lt;div class="form-group">
-&lt;label for="hl-presets">Program Template&lt;/label>
-&lt;select id="hl-presets" onchange="loadHlPreset()">
-&lt;option value="abs-val">Absolute Value (Conditional Branching)&lt;/option>
-&lt;option value="sum-n">Sum of first N integers (Loop Invariants)&lt;/option>
-&lt;option value="int-div">Integer Division (While Loop Correctness)&lt;/option>
+&lt;label for="hl-presets">Program&lt;/label>
+&lt;select id="hl-presets">
+&lt;option value="abs">Absolute value&lt;/option>
+&lt;option value="swap">Swap two variables (has a bug)&lt;/option>
+&lt;option value="sum">Sum of 1 to N (loop)&lt;/option>
+&lt;option value="div">Integer division (loop)&lt;/option>
 &lt;/select>
-&lt;/div>
-&lt;div class="verification-inputs">
-&lt;div class="form-group">
-&lt;label>Precondition { P }&lt;/label>
-&lt;div id="hl-precondition" class="code-badge-display">&lt;/div>
+&lt;p id="hl-hint" class="hint-text">&lt;/p>
 &lt;/div>
 &lt;div class="form-group">
-&lt;label>Loop Invariant { I }&lt;/label>
-&lt;div id="hl-invariant-container" class="code-badge-display">
+&lt;label for="hl-pre">Precondition P&lt;/label>
+&lt;input type="text" id="hl-pre" class="mono-input" spellcheck="false" autocomplete="off">
 &lt;/div>
+&lt;div class="form-group" id="hl-inv-group">
+&lt;label for="hl-inv">Loop invariant I&lt;/label>
+&lt;input type="text" id="hl-inv" class="mono-input" spellcheck="false" autocomplete="off">
 &lt;/div>
 &lt;div class="form-group">
-&lt;label>Postcondition { Q }&lt;/label>
-&lt;div id="hl-postcondition" class="code-badge-display">&lt;/div>
+&lt;label for="hl-post">Postcondition Q&lt;/label>
+&lt;input type="text" id="hl-post" class="mono-input" spellcheck="false" autocomplete="off">
 &lt;/div>
-&lt;/div>
+&lt;div id="hl-error" class="error-text">&lt;/div>
 &lt;div class="control-buttons">
-&lt;button class="btn btn-primary" onclick="verifyProgram()">Generate VCs&lt;/button>
-&lt;button class="btn btn-secondary" onclick="stepProgramVerification()">Verify Steps&lt;/button>
-&lt;button class="btn btn-danger" onclick="resetHoareVerifier()">Reset&lt;/button>
+&lt;button type="button" class="btn btn-primary" id="btn-hl-check">Check VCs&lt;/button>
+&lt;button type="button" class="btn btn-secondary" id="btn-hl-step">Step&lt;/button>
+&lt;button type="button" class="btn btn-danger btn-wide" id="btn-hl-reset">Reset&lt;/button>
 &lt;/div>
 &lt;div class="console-panel">
-&lt;h4 class="sub-panel-title">Weakest Precondition (WP) Trace&lt;/h4>
-&lt;div id="hl-logs" class="console-log">
-&lt;span class="log-info">Select a template and click "Generate VCs" to analyze.&lt;/span>
-&lt;/div>
+&lt;h4 class="sub-panel-title">Weakest precondition trace&lt;/h4>
+&lt;div id="hl-logs" class="console-log tall" aria-live="polite">&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;div class="fv-visual-panel">
 &lt;div class="panel-header-toolbar">
-&lt;span class="panel-subtitle">Verified Code &amp; SMT Proof Targets&lt;/span>
+&lt;span class="panel-subtitle">Annotated program and verification conditions&lt;/span>
 &lt;span id="hl-status" class="badge badge-neutral">IDLE&lt;/span>
 &lt;/div>
 &lt;div class="code-verification-grid">
 &lt;div class="code-editor-mock">
-&lt;h4 class="sub-panel-title">Annotated Program Code&lt;/h4>
-&lt;div id="hl-code-display" class="code-lines-box">
-&lt;/div>
+&lt;h4 class="sub-panel-title">Program&lt;/h4>
+&lt;div id="hl-code-display" class="code-lines-box">&lt;/div>
 &lt;/div>
 &lt;div class="vc-proof-panel">
-&lt;h4 class="sub-panel-title">Verification Conditions (VCs)&lt;/h4>
-&lt;div id="hl-vc-list" class="vc-list-box">
-&lt;span class="placeholder-text">VCs will appear here after calculation.&lt;/span>
+&lt;h4 class="sub-panel-title">Verification conditions&lt;/h4>
+&lt;div id="hl-vc-list" class="vc-list-box">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p class="hint-text">VCs are checked by trying every integer combination in a small range, so a pass is strong evidence rather than a proof. Only partial correctness is checked here, not termination.&lt;/p>
 &lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;script src="https://bilalsarwar071.github.io/js/fv_playground.js">&lt;/script>
-&lt;hr>
-&lt;h2 id="what-is-formal-verification">What is Formal Verification?&lt;/h2>
-&lt;p>Formal verification is the act of proving or disproving the correctness of intended algorithms underlying a system with respect to a certain formal specification or property, using formal methods of mathematics. Unlike testing, which shows the presence of bugs under specific inputs, formal verification can prove the &lt;strong>absence of bugs&lt;/strong> for all possible execution paths and inputs.&lt;/p>
-&lt;h3 id="core-areas-explored-in-this-lab">Core Areas Explored in this Lab:&lt;/h3>
-&lt;ol>
-&lt;li>
-&lt;p>&lt;strong>SAT Solving (Propositional Logic)&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>How it works:&lt;/strong> SAT solvers check if a boolean formula is satisfiable (i.e., there exists an assignment of variables that makes the formula true).&lt;/li>
-&lt;li>&lt;strong>Why it matters:&lt;/strong> Most verification tasks (like bounded model checking and software verification) are compiled down to SAT/SMT problems. Solvers like Z3 or Yices process billions of variables in industrial applications.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Model Checking (Temporal Logic &amp;amp; Kripke Structures)&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>How it works:&lt;/strong> A model checker exhaustively checks all reachable states of a system model to verify whether a specification (written in CTL or LTL) holds.&lt;/li>
-&lt;li>&lt;strong>Why it matters:&lt;/strong> It is widely used to verify concurrent and distributed systems (such as mutual exclusion, cache coherence, or protocols) where testing struggles to hit all interleavings.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Program Verification (Hoare Logic)&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>How it works:&lt;/strong> Uses Hoare triples &lt;code>{Precondition} Program {Postcondition}&lt;/code> to verify structural correctness. It applies verification rules to generate mathematical statements (Verification Conditions) that, when proved, guarantee correctness.&lt;/li>
-&lt;li>&lt;strong>Why it matters:&lt;/strong> It provides the foundation for compiler verification, secure operating systems (like seL4), and safety-critical library correctness.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol></description></item><item><title>Formal Analysis of Lane-Changing Algorithms using Probabilistic Model Checking</title><link>https://bilalsarwar071.github.io/publication/lane-changing-model-checking/</link><pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/publication/lane-changing-model-checking/</guid><description/></item><item><title>Revolutionizing ICT with AI and ML: A Comprehensive Study of Current Applications and Future Potential</title><link>https://bilalsarwar071.github.io/publication/journal-article/</link><pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/publication/journal-article/</guid><description/></item><item><title>Projects</title><link>https://bilalsarwar071.github.io/projects/</link><pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/projects/</guid><description/></item><item><title>Text Categorization Using Encoder only Transformer</title><link>https://bilalsarwar071.github.io/project/text-classification/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/text-classification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;script src="https://bilalsarwar071.github.io/js/fv_playground.js?v=806596df">&lt;/script>
+&lt;h2 id="what-you-are-looking-at">What you are looking at&lt;/h2>
+&lt;p>&lt;strong>DPLL SAT solver.&lt;/strong> A SAT solver decides whether a propositional formula has a satisfying assignment. DPLL guesses a value for one variable, follows every consequence it is forced into (unit propagation), and backtracks when a clause becomes false. The tree shows guesses as circles and forced assignments as diamonds. The pigeonhole example is worth stepping through: you cannot put three pigeons into two holes without two of them sharing, and the solver has to rule out every option before it can say so.&lt;/p>
+&lt;p>&lt;strong>CTL model checker.&lt;/strong> The four systems are written as small guarded-command programs. The checker builds every reachable state from them, then works out which states satisfy each part of your formula, from the inside out. Press Step to watch that happen one subformula at a time. When a property fails you get a counterexample run, and for properties like EF you get a witness. Peterson&amp;rsquo;s algorithm passes everything. Remove the turn variable and it still keeps the processes apart, but it can deadlock. The naive lock fails at the most basic job, and the checker shows you the exact interleaving that breaks it.&lt;/p>
+&lt;p>&lt;strong>Hoare logic verifier.&lt;/strong> A Hoare triple {P} S {Q} says that if P holds before program S runs, then Q holds after it. The verifier works backwards from Q, computing the weakest precondition of each statement, and turns the result into verification conditions (VCs). Loops need an invariant, which you provide. You can edit any of the conditions. Try weakening an invariant and see which VC breaks, and what counterexample it gives you.&lt;/p>
+&lt;h2 id="why-this-matters">Why this matters&lt;/h2>
+&lt;p>Testing can show that a program works on the inputs you tried. Formal verification aims to show that it works on all of them, or to find the case where it does not. That is why these ideas show up wherever failures are expensive: hardware design, operating system kernels like seL4, flight software and communication protocols. Real tools are far more capable than these toys, but the core ideas are the same.&lt;/p></description></item><item><title>Formal Analysis of Lane-Changing Algorithms using Probabilistic Model Checking</title><link>https://bilalsarwar071.github.io/publication/lane-changing-model-checking/</link><pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/publication/lane-changing-model-checking/</guid><description/></item><item><title>Revolutionizing ICT with AI and ML: A Comprehensive Study of Current Applications and Future Potential</title><link>https://bilalsarwar071.github.io/publication/journal-article/</link><pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/publication/journal-article/</guid><description/></item><item><title>Projects</title><link>https://bilalsarwar071.github.io/projects/</link><pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/projects/</guid><description/></item><item><title>Text Categorization Using Encoder only Transformer</title><link>https://bilalsarwar071.github.io/project/text-classification/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/text-classification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
 &lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
 &lt;em>Dec 2023 - Jan 2024&lt;/em>&lt;/p>
 &lt;h2 id="project-description">Project Description&lt;/h2>
@@ -460,7 +437,7 @@ console.log('code block');
 &lt;p>Hugo Blox supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-185479362" class="chart">&lt;/div>
+&lt;div id="chart-541623987" class="chart">&lt;/div>
 &lt;script>
 async function fetchChartJSON() {
 console.debug('Hugo Blox fetching chart JSON...')
@@ -476,7 +453,7 @@ return;
 clearInterval( a );
 fetchChartJSON().then(chart => {
 console.debug('Plotting chart...')
-window.Plotly.newPlot('chart-185479362', chart.data, chart.layout, {responsive: true});
+window.Plotly.newPlot('chart-541623987', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
