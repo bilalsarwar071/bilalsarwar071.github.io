@@ -1,15 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IoT | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/tags/iot/</link><atom:link href="https://bilalsarwar071.github.io/tags/iot/index.xml" rel="self" type="application/rss+xml"/><description>IoT</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jan 2022 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_ef8be4a73e75cc6b.png</url><title>IoT</title><link>https://bilalsarwar071.github.io/tags/iot/</link></image><item><title>Adaptive Irrigated Agriculture Monitoring (Embedded + Cloud)</title><link>https://bilalsarwar071.github.io/project/irrigation-monitoring/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/irrigation-monitoring/</guid><description>&lt;h2 id="project-description">Project Description&lt;/h2>
-&lt;p>This was an IoT system for keeping track of conditions in the field. Embedded sensor nodes measured soil and air conditions and sent the readings to the cloud in real time, so irrigation could follow what the crop actually needed instead of a fixed schedule.&lt;/p>
-&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
-&lt;ul>
-&lt;li>Built the embedded sensor setup that reads soil and air conditions.&lt;/li>
-&lt;li>Connected the sensor nodes to the cloud for real-time monitoring.&lt;/li>
-&lt;li>Used the incoming data to decide when and how much to irrigate.&lt;/li>
-&lt;/ul>
-&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
-&lt;ul>
-&lt;li>Embedded Systems&lt;/li>
-&lt;li>IoT&lt;/li>
-&lt;li>Sensors&lt;/li>
-&lt;li>Cloud Integration&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IoT | Muhammad Bilal Sarwar</title>
+    <link>http://localhost:1313/tags/iot/</link>
+      <atom:link href="http://localhost:1313/tags/iot/index.xml" rel="self" type="application/rss+xml" />
+    <description>IoT</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_ef8be4a73e75cc6b.png</url>
+      <title>IoT</title>
+      <link>http://localhost:1313/tags/iot/</link>
+    </image>
+    
+    <item>
+      <title>Adaptive Irrigated Agriculture Monitoring (Embedded &#43; Cloud)</title>
+      <link>http://localhost:1313/project/irrigation-monitoring/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/irrigation-monitoring/</guid>
+      <description>&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt;
+&lt;p&gt;This was an IoT system for keeping track of conditions in the field. Embedded sensor nodes measured soil and air conditions and sent the readings to the cloud in real time, so irrigation could follow what the crop actually needed instead of a fixed schedule.&lt;/p&gt;
+&lt;h2 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Built the embedded sensor setup that reads soil and air conditions.&lt;/li&gt;
+&lt;li&gt;Connected the sensor nodes to the cloud for real-time monitoring.&lt;/li&gt;
+&lt;li&gt;Used the incoming data to decide when and how much to irrigate.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;technical-skills-acquired&#34;&gt;Technical Skills Acquired&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Embedded Systems&lt;/li&gt;
+&lt;li&gt;IoT&lt;/li&gt;
+&lt;li&gt;Sensors&lt;/li&gt;
+&lt;li&gt;Cloud Integration&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

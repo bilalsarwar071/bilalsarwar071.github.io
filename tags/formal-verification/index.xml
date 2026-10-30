@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Formal Verification | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/tags/formal-verification/</link><atom:link href="https://bilalsarwar071.github.io/tags/formal-verification/index.xml" rel="self" type="application/rss+xml"/><description>Formal Verification</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_ef8be4a73e75cc6b.png</url><title>Formal Verification</title><link>https://bilalsarwar071.github.io/tags/formal-verification/</link></image><item><title>Formal Analysis of Lane-Changing Algorithms using Probabilistic Model Checking</title><link>https://bilalsarwar071.github.io/publication/lane-changing-model-checking/</link><pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/publication/lane-changing-model-checking/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Formal Verification | Muhammad Bilal Sarwar</title>
+    <link>http://localhost:1313/tags/formal-verification/</link>
+      <atom:link href="http://localhost:1313/tags/formal-verification/index.xml" rel="self" type="application/rss+xml" />
+    <description>Formal Verification</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_ef8be4a73e75cc6b.png</url>
+      <title>Formal Verification</title>
+      <link>http://localhost:1313/tags/formal-verification/</link>
+    </image>
+    
+    <item>
+      <title>Formal Analysis of Lane-Changing Algorithms using Probabilistic Model Checking</title>
+      <link>http://localhost:1313/publication/lane-changing-model-checking/</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/lane-changing-model-checking/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

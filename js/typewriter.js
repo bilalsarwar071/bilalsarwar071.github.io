@@ -1,77 +1,65 @@
-// Typewriter Animation JavaScript
-function initTypewriter() {
-  console.log('Typewriter script loaded');
-  
-  const typewriterElement = document.querySelector('.typewriter-text-enhanced');
-  console.log('Typewriter element found:', typewriterElement);
-  
-  if (typewriterElement) {
-    const text = typewriterElement.textContent.trim();
-    console.log('Text to animate:', text);
-    
-    typewriterElement.textContent = '';
-    typewriterElement.style.borderRight = '3px solid #3498db';
-    typewriterElement.style.overflow = 'hidden';
-    typewriterElement.style.whiteSpace = 'nowrap';
-    
-    let i = 0;
-    let isDeleting = false;
-    let cursorVisible = true;
-    
-    // Blinking cursor effect
-    function blinkCursor() {
-      if (cursorVisible) {
-        typewriterElement.style.borderRight = '3px solid #3498db';
-      } else {
-        typewriterElement.style.borderRight = '3px solid transparent';
-      }
-      cursorVisible = !cursorVisible;
-      setTimeout(blinkCursor, 500);
+/* Types out the homepage tagline, one line after another.
+ *
+ * Every line is split into a visible typed part and an invisible remainder,
+ * so the box has its final size from the start and nothing jumps around.
+ */
+(function () {
+  'use strict';
+
+  const TYPE_MS = 45;
+  const LINE_PAUSE_MS = 450;
+
+  function start(box) {
+    const lines = [...box.querySelectorAll('.typewriter-line')].map((line) => {
+      const chars = Array.from(line.textContent);
+      line.textContent = '';
+      const typed = document.createElement('span');
+      typed.className = 'typewriter-typed';
+      const rest = document.createElement('span');
+      rest.className = 'typewriter-rest';
+      rest.textContent = chars.join('');
+      line.append(typed, rest);
+      return { line, typed, rest, chars };
+    });
+    if (!lines.length) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      lines.forEach((l) => { l.typed.textContent = l.chars.join(''); l.rest.textContent = ''; });
+      box.classList.add('typewriter-done');
+      return;
     }
-    
-    function typeWriter() {
-      if (isDeleting) {
-        // Deleting characters
-        typewriterElement.textContent = text.substring(0, i);
-        i--;
-        
-        if (i < 0) {
-          isDeleting = false;
-          setTimeout(typeWriter, 500); // Pause before typing again
-        } else {
-          setTimeout(typeWriter, 50); // Faster deletion
-        }
-      } else {
-        // Typing characters
-        typewriterElement.textContent = text.substring(0, i + 1);
-        i++;
-        
-        if (i >= text.length) {
-          isDeleting = true;
-          setTimeout(typeWriter, 2000); // Pause before deleting
-        } else {
-          setTimeout(typeWriter, 100); // Typing speed
-        }
+
+    let row = 0;
+    let col = 0;
+    const tick = () => {
+      const l = lines[row];
+      l.line.classList.add('typing');
+      col++;
+      l.typed.textContent = l.chars.slice(0, col).join('');
+      l.rest.textContent = l.chars.slice(col).join('');
+      if (col < l.chars.length) {
+        setTimeout(tick, TYPE_MS);
+        return;
       }
-    }
-    
-    // Start the blinking cursor
-    blinkCursor();
-    
-    // Start the animation after a delay
-    setTimeout(typeWriter, 1000);
-  } else {
-    console.log('Typewriter element not found, retrying...');
-    setTimeout(initTypewriter, 1000);
+      if (row === lines.length - 1) {
+        box.classList.add('typewriter-done');
+        return;
+      }
+      l.line.classList.remove('typing');
+      row++;
+      col = 0;
+      setTimeout(tick, LINE_PAUSE_MS);
+    };
+    setTimeout(tick, 400);
   }
-}
 
-// Try multiple ways to ensure the script runs
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initTypewriter);
-} else {
-  initTypewriter();
-}
+  function init() {
+    document.querySelectorAll('.typewriter-text').forEach(start);
+  }
 
-// Also try after a delay as a fallback
-setTimeout(initTypewriter, 2000);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();

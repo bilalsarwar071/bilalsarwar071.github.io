@@ -1,19 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Text Classification | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/tags/text-classification/</link><atom:link href="https://bilalsarwar071.github.io/tags/text-classification/index.xml" rel="self" type="application/rss+xml"/><description>Text Classification</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_ef8be4a73e75cc6b.png</url><title>Text Classification</title><link>https://bilalsarwar071.github.io/tags/text-classification/</link></image><item><title>Text Categorization Using Encoder only Transformer</title><link>https://bilalsarwar071.github.io/project/text-classification/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/text-classification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
-&lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
-&lt;em>Dec 2023 - Jan 2024&lt;/em>&lt;/p>
-&lt;h2 id="project-description">Project Description&lt;/h2>
-&lt;p>The goal here was to sort text into a fixed set of categories automatically. I used an encoder-only transformer, the same family as BERT, because it builds a representation of the whole input, which suits classification well.&lt;/p>
-&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
-&lt;ul>
-&lt;li>Built a text categorization model on an encoder-only transformer architecture.&lt;/li>
-&lt;li>Evaluated and fine-tuned the model so it categorized a varied mix of text reliably.&lt;/li>
-&lt;li>Implemented everything in Python with Hugging Face Transformers and scikit-learn.&lt;/li>
-&lt;/ul>
-&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
-&lt;ul>
-&lt;li>Python&lt;/li>
-&lt;li>Natural Language Processing (NLP)&lt;/li>
-&lt;li>Transformers&lt;/li>
-&lt;li>Text Classification&lt;/li>
-&lt;li>Machine Learning&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Text Classification | Muhammad Bilal Sarwar</title>
+    <link>http://localhost:1313/tags/text-classification/</link>
+      <atom:link href="http://localhost:1313/tags/text-classification/index.xml" rel="self" type="application/rss+xml" />
+    <description>Text Classification</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_ef8be4a73e75cc6b.png</url>
+      <title>Text Classification</title>
+      <link>http://localhost:1313/tags/text-classification/</link>
+    </image>
+    
+    <item>
+      <title>Text Categorization Using Encoder only Transformer</title>
+      <link>http://localhost:1313/project/text-classification/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/text-classification/</guid>
+      <description>&lt;h2 id=&#34;institution&#34;&gt;Institution&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Dec 2023 - Jan 2024&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt;
+&lt;p&gt;The goal here was to sort text into a fixed set of categories automatically. I used an encoder-only transformer, the same family as BERT, because it builds a representation of the whole input, which suits classification well.&lt;/p&gt;
+&lt;h2 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Built a text categorization model on an encoder-only transformer architecture.&lt;/li&gt;
+&lt;li&gt;Evaluated and fine-tuned the model so it categorized a varied mix of text reliably.&lt;/li&gt;
+&lt;li&gt;Implemented everything in Python with Hugging Face Transformers and scikit-learn.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;technical-skills-acquired&#34;&gt;Technical Skills Acquired&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Natural Language Processing (NLP)&lt;/li&gt;
+&lt;li&gt;Transformers&lt;/li&gt;
+&lt;li&gt;Text Classification&lt;/li&gt;
+&lt;li&gt;Machine Learning&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

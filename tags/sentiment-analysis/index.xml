@@ -1,19 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sentiment Analysis | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/tags/sentiment-analysis/</link><atom:link href="https://bilalsarwar071.github.io/tags/sentiment-analysis/index.xml" rel="self" type="application/rss+xml"/><description>Sentiment Analysis</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 26 Oct 2023 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_ef8be4a73e75cc6b.png</url><title>Sentiment Analysis</title><link>https://bilalsarwar071.github.io/tags/sentiment-analysis/</link></image><item><title>Sentiment Analysis Using BERT</title><link>https://bilalsarwar071.github.io/project/sentiment-analysis/</link><pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/sentiment-analysis/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
-&lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
-&lt;em>Oct 2023 - Dec 2023&lt;/em>&lt;/p>
-&lt;h2 id="project-description">Project Description&lt;/h2>
-&lt;p>For this project I built a sentiment classifier using BERT (Bidirectional Encoder Representations from Transformers). BERT reads each word in the context of the whole sentence, which matters a lot for sentiment, where a single word like &amp;ldquo;not&amp;rdquo; can flip the meaning.&lt;/p>
-&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
-&lt;ul>
-&lt;li>Fine-tuned pre-trained BERT models for sentiment classification instead of training from scratch.&lt;/li>
-&lt;li>Prepared the text data with standard NLP preprocessing before training.&lt;/li>
-&lt;li>Wrote the pipeline in Python using HuggingFace Transformers and TensorFlow.&lt;/li>
-&lt;/ul>
-&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
-&lt;ul>
-&lt;li>Python&lt;/li>
-&lt;li>Natural Language Processing (NLP)&lt;/li>
-&lt;li>BERT&lt;/li>
-&lt;li>Machine Learning&lt;/li>
-&lt;li>Data Preprocessing&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sentiment Analysis | Muhammad Bilal Sarwar</title>
+    <link>http://localhost:1313/tags/sentiment-analysis/</link>
+      <atom:link href="http://localhost:1313/tags/sentiment-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <description>Sentiment Analysis</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 26 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_ef8be4a73e75cc6b.png</url>
+      <title>Sentiment Analysis</title>
+      <link>http://localhost:1313/tags/sentiment-analysis/</link>
+    </image>
+    
+    <item>
+      <title>Sentiment Analysis Using BERT</title>
+      <link>http://localhost:1313/project/sentiment-analysis/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/sentiment-analysis/</guid>
+      <description>&lt;h2 id=&#34;institution&#34;&gt;Institution&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Oct 2023 - Dec 2023&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt;
+&lt;p&gt;For this project I built a sentiment classifier using BERT (Bidirectional Encoder Representations from Transformers). BERT reads each word in the context of the whole sentence, which matters a lot for sentiment, where a single word like &amp;ldquo;not&amp;rdquo; can flip the meaning.&lt;/p&gt;
+&lt;h2 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fine-tuned pre-trained BERT models for sentiment classification instead of training from scratch.&lt;/li&gt;
+&lt;li&gt;Prepared the text data with standard NLP preprocessing before training.&lt;/li&gt;
+&lt;li&gt;Wrote the pipeline in Python using HuggingFace Transformers and TensorFlow.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;technical-skills-acquired&#34;&gt;Technical Skills Acquired&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Natural Language Processing (NLP)&lt;/li&gt;
+&lt;li&gt;BERT&lt;/li&gt;
+&lt;li&gt;Machine Learning&lt;/li&gt;
+&lt;li&gt;Data Preprocessing&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
