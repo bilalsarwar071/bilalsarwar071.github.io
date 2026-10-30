@@ -235,6 +235,47 @@
   }
 }
 
+/* ---------- Languages on the Experience page ---------- */
+
+.language-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+  /* The theme shrink-wraps this block, so give the row its own width */
+  width: min(42rem, calc(100vw - 2rem));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.language-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 10rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(100, 116, 139, 0.25);
+  text-align: center;
+}
+
+.language-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.language-level {
+  margin-top: 0.15rem;
+  font-size: 0.88rem;
+  color: #059669;
+}
+
+.dark .language-item { border-color: rgba(148, 163, 184, 0.2); }
+.dark .language-name { color: #f1f5f9; }
+.dark .language-level { color: #34d399; }
+
 /* ---------- Typewriter tagline on the homepage ---------- */
 
 .typewriter {
