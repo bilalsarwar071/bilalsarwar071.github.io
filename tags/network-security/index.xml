@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Network Security | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/tags/network-security/</link><atom:link href="https://bilalsarwar071.github.io/tags/network-security/index.xml" rel="self" type="application/rss+xml"/><description>Network Security</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Feb 2025 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_ef8be4a73e75cc6b.png</url><title>Network Security</title><link>https://bilalsarwar071.github.io/tags/network-security/</link></image><item><title>Out-of-Distribution Detection in Encrypted Video Traffic</title><link>https://bilalsarwar071.github.io/project/encrypted-traffic-ood/</link><pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/encrypted-traffic-ood/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>Data Science &amp;amp; Machine Learning Lab, SINES, NUST&lt;/strong>&lt;br>
+&lt;em>Feb 2025 - May 2025&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>Video traffic is encrypted, so a classifier only sees patterns in the packets, not the content. It also needs to notice when traffic does not look like anything it was trained on, instead of confidently guessing. I led the lab&amp;rsquo;s project on this out-of-distribution (OOD) detection problem for encrypted YouTube traffic.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Designed the data pipelines and the deep learning models.&lt;/li>
+&lt;li>Wrote the first draft of the paper, &amp;ldquo;Unified Framework for YouTube Traffic Classification and Out-of-Distribution Detection in Encrypted Networks&amp;rdquo;, which the lab plans to resubmit.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Deep Learning&lt;/li>
+&lt;li>Out-of-Distribution Detection&lt;/li>
+&lt;li>Network Traffic Analysis&lt;/li>
+&lt;/ul></description></item></channel></rss>

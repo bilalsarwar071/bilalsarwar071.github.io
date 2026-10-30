@@ -1,4 +1,241 @@
-/* Typewriter tagline on the homepage */
+/* Site-wide additions on top of the Hugo Blox theme.
+   Light mode is the default; `.dark` on <html> switches to dark mode. */
+
+/* ---------- News list on the homepage ---------- */
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.news-list li {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(100, 116, 139, 0.2);
+  color: #334155;
+}
+
+.news-list li:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #059669;
+  white-space: nowrap;
+  padding-top: 0.05rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.news-list a {
+  color: #047857;
+  text-decoration: underline;
+  text-decoration-color: rgba(4, 120, 87, 0.35);
+  text-underline-offset: 3px;
+}
+
+.news-list a:hover {
+  text-decoration-color: currentColor;
+}
+
+.dark .news-list li { color: #cbd5e1; border-bottom-color: rgba(148, 163, 184, 0.15); }
+.dark .news-date { color: #34d399; }
+.dark .news-list a { color: #6ee7b7; text-decoration-color: rgba(110, 231, 183, 0.4); }
+
+@media (max-width: 480px) {
+  .news-list li {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+}
+
+/* ---------- Interactive Lab card on the homepage ---------- */
+
+.lab-card {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.75rem;
+  border-radius: 14px;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.06));
+}
+
+.lab-card-kicker {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #059669;
+}
+
+.lab-card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #0f172a;
+}
+
+.lab-card-text > p:not(.lab-card-kicker) {
+  margin: 0 0 1.1rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.lab-card-button {
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  background: #10b981;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lab-card-button:hover {
+  background: #059669;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+}
+
+.lab-card-art {
+  width: 100%;
+  height: auto;
+  color: #64748b;
+}
+
+.lab-card-art .lab-card-edges path { stroke: #94a3b8; }
+.lab-card-art .lab-card-edges path.bad { stroke: #f43f5e; color: #f43f5e; }
+.lab-card-art .node { fill: #ffffff; stroke: #94a3b8; stroke-width: 2.5; }
+.lab-card-art .node.init { stroke: #10b981; stroke-width: 4; }
+.lab-card-art .node.bad { stroke: #f43f5e; stroke-width: 3.5; }
+.lab-card-art .label { font: 700 12px system-ui, sans-serif; fill: #1e293b; text-anchor: middle; }
+
+.dark .lab-card { background: linear-gradient(135deg, rgba(16, 185, 129, 0.14), rgba(59, 130, 246, 0.08)); }
+.dark .lab-card-kicker { color: #34d399; }
+.dark .lab-card h3 { color: #f8fafc; }
+.dark .lab-card-text > p:not(.lab-card-kicker) { color: #cbd5e1; }
+.dark .lab-card-art .node { fill: #0f172a; }
+.dark .lab-card-art .label { fill: #f1f5f9; }
+
+@media (max-width: 600px) {
+  .lab-card {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .lab-card-art {
+    display: none;
+  }
+}
+
+/* ---------- Publication cards ---------- */
+
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.pub-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.25rem;
+  padding: 1.1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(100, 116, 139, 0.25);
+  background: rgba(255, 255, 255, 0.6);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pub-card:hover {
+  border-color: rgba(16, 185, 129, 0.6);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+.pub-card-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(100, 116, 139, 0.2);
+  padding: 0.4rem;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.pub-card-thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.pub-card-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.pub-card-title a { color: #0f172a; text-decoration: none; }
+.pub-card-title a:hover { color: #047857; }
+
+.pub-card-authors {
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.pub-card-venue {
+  margin-top: 0.15rem;
+  font-size: 0.88rem;
+  color: #64748b;
+}
+
+.pub-card-summary {
+  margin: 0.55rem 0 0.4rem;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.pub-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.3rem;
+}
+
+.dark .pub-card { background: rgba(15, 23, 42, 0.55); border-color: rgba(148, 163, 184, 0.2); }
+.dark .pub-card-title a { color: #f1f5f9; }
+.dark .pub-card-title a:hover { color: #6ee7b7; }
+.dark .pub-card-authors { color: #cbd5e1; }
+.dark .pub-card-venue { color: #94a3b8; }
+.dark .pub-card-summary { color: #cbd5e1; }
+
+@media (max-width: 640px) {
+  .pub-card {
+    grid-template-columns: 1fr;
+  }
+
+  .pub-card-thumb {
+    max-width: 320px;
+  }
+}
+
+/* ---------- Typewriter tagline on the homepage ---------- */
 
 .typewriter {
   margin: 0 0 1.75rem;

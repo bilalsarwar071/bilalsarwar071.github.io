@@ -1,24 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Machine Learning | Muhammad Bilal Sarwar</title>
-    <link>http://localhost:1313/tags/machine-learning/</link>
-      <atom:link href="http://localhost:1313/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
-    <description>Machine Learning</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_ef8be4a73e75cc6b.png</url>
-      <title>Machine Learning</title>
-      <link>http://localhost:1313/tags/machine-learning/</link>
-    </image>
-    
-    <item>
-      <title>Car Price Prediction Using Machine Learning Techniques</title>
-      <link>http://localhost:1313/project/car-price/</link>
-      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/car-price/</guid>
-      <description>&lt;p&gt;In this project I helped build a machine learning model that predicts the price of a car from a wide range of its features.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Machine Learning | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/tags/machine-learning/</link><atom:link href="https://bilalsarwar071.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml"/><description>Machine Learning</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_ef8be4a73e75cc6b.png</url><title>Machine Learning</title><link>https://bilalsarwar071.github.io/tags/machine-learning/</link></image><item><title>IoT Monitoring of Dengue and Zika Mosquitoes</title><link>https://bilalsarwar071.github.io/project/dengue-iot-monitoring/</link><pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/dengue-iot-monitoring/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>Geo Visual Analytics Lab, IGIS, NUST&lt;/strong>&lt;br>
+&lt;em>May 2023 - Dec 2023&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>Dengue and Zika are spread by mosquitoes, and knowing where those mosquitoes are helps predict where an outbreak is likely. This project built an IoT system to monitor them automatically.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Built the real-time data collection setup on Raspberry Pi devices.&lt;/li>
+&lt;li>Used OpenCV and machine learning to detect mosquitoes in the captured images.&lt;/li>
+&lt;li>Ran a four-week workshop on Python for computer vision.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Raspberry Pi&lt;/li>
+&lt;li>OpenCV&lt;/li>
+&lt;li>Machine Learning&lt;/li>
+&lt;li>IoT&lt;/li>
+&lt;/ul></description></item><item><title>Car Price Prediction Using Machine Learning Techniques</title><link>https://bilalsarwar071.github.io/project/car-price/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/car-price/</guid><description>&lt;p>In this project I helped build a machine learning model that predicts the price of a car from a wide range of its features.&lt;/p></description></item></channel></rss>

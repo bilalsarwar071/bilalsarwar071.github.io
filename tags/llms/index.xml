@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LLMs | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/tags/llms/</link><atom:link href="https://bilalsarwar071.github.io/tags/llms/index.xml" rel="self" type="application/rss+xml"/><description>LLMs</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jun 2025 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_ef8be4a73e75cc6b.png</url><title>LLMs</title><link>https://bilalsarwar071.github.io/tags/llms/</link></image><item><title>LLM-Guided Heuristics for SAT Solvers</title><link>https://bilalsarwar071.github.io/project/llm-sat-heuristics/</link><pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/llm-sat-heuristics/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>System Analysis and Verification (SAVe) Lab, SEECS, NUST&lt;/strong>&lt;br>
+&lt;em>Jun 2025 - Present&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>SAT solvers depend on carefully tuned heuristics. In this project I look at whether large language models can help design them, without fine-tuning the model itself. A lot of recent work lets the model reflect on its earlier attempts, so we also asked a simple question: does that reflection actually help?&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Developing neuro-symbolic frameworks that combine LLMs with SAT solver heuristics.&lt;/li>
+&lt;li>Ran a placebo-controlled study to test whether LLM reflection really improves the heuristics it produces.&lt;/li>
+&lt;li>Evolved phase-initialisation heuristics for CaDiCaL. The best ones ran 48% faster on the DFVS benchmarks and 37% faster on the decision-tree benchmarks than the best default setup.&lt;/li>
+&lt;li>The manuscript is complete, with Osman Hasan and S. Abed.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>SAT Solving&lt;/li>
+&lt;li>CaDiCaL&lt;/li>
+&lt;li>Large Language Models&lt;/li>
+&lt;li>Experimental Design&lt;/li>
+&lt;/ul></description></item></channel></rss>

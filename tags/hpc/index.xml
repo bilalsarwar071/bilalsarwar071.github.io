@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HPC | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/tags/hpc/</link><atom:link href="https://bilalsarwar071.github.io/tags/hpc/index.xml" rel="self" type="application/rss+xml"/><description>HPC</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_ef8be4a73e75cc6b.png</url><title>HPC</title><link>https://bilalsarwar071.github.io/tags/hpc/</link></image><item><title>OpenStack GPU Cloud for Precision Agriculture</title><link>https://bilalsarwar071.github.io/project/openstack-gpu-cloud/</link><pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/openstack-gpu-cloud/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>GreenAI (Precision Agriculture), HPC Department, NASTP, Rawalpindi&lt;/strong>&lt;br>
+&lt;em>Feb 2026 - Present&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>GreenAI&amp;rsquo;s precision agriculture teams and its IaaS clients needed a place to run their workloads, including GPU-heavy ones. I built that platform and now look after it.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Deployed OpenStack across more than 20 bare metal nodes using MAAS, Sunbeam, Juju, MicroCeph and OVN.&lt;/li>
+&lt;li>Set up Kubernetes with GPU passthrough and provisioned GPU virtual machines for internal teams and clients.&lt;/li>
+&lt;li>Moved vendor-provided and in-house applications from testing into a secure production environment, with CI/CD pipelines, rollback procedures and automated nightly backups.&lt;/li>
+&lt;li>Lead the HPC administration team, review configuration changes and plan the 24/7 shift roster.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>OpenStack&lt;/li>
+&lt;li>Kubernetes&lt;/li>
+&lt;li>Ceph and OVN&lt;/li>
+&lt;li>CI/CD&lt;/li>
+&lt;/ul></description></item></channel></rss>

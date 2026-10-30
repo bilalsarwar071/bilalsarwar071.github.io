@@ -1,24 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Probabilistic Model Checking | Muhammad Bilal Sarwar</title>
-    <link>http://localhost:1313/tags/probabilistic-model-checking/</link>
-      <atom:link href="http://localhost:1313/tags/probabilistic-model-checking/index.xml" rel="self" type="application/rss+xml" />
-    <description>Probabilistic Model Checking</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_ef8be4a73e75cc6b.png</url>
-      <title>Probabilistic Model Checking</title>
-      <link>http://localhost:1313/tags/probabilistic-model-checking/</link>
-    </image>
-    
-    <item>
-      <title>Formal Analysis of Lane-Changing Algorithms using Probabilistic Model Checking</title>
-      <link>http://localhost:1313/publication/lane-changing-model-checking/</link>
-      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/publication/lane-changing-model-checking/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Probabilistic Model Checking | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/tags/probabilistic-model-checking/</link><atom:link href="https://bilalsarwar071.github.io/tags/probabilistic-model-checking/index.xml" rel="self" type="application/rss+xml"/><description>Probabilistic Model Checking</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_ef8be4a73e75cc6b.png</url><title>Probabilistic Model Checking</title><link>https://bilalsarwar071.github.io/tags/probabilistic-model-checking/</link></image><item><title>Formal Verification of Lane-Changing Algorithms</title><link>https://bilalsarwar071.github.io/project/lane-changing-verification/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/lane-changing-verification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>System Analysis and Verification (SAVe) Lab, SEECS, NUST&lt;/strong>&lt;br>
+&lt;em>Jan 2024 - Jan 2025&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>Lane changing is one of the most complex things an autonomous vehicle does, and it is usually checked in simulation, which can miss rare corner cases. For my MS thesis I analyzed lane-changing algorithms formally instead, so the results hold for every behavior the model allows, not just the runs we happened to simulate.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Modeled the MOBIL lane-changing algorithm together with the Intelligent Driver Model as a Markov Decision Process.&lt;/li>
+&lt;li>Wrote safety, lane-change efficiency, timing and robustness requirements in PCTL and checked them with the PRISM probabilistic model checker.&lt;/li>
+&lt;li>Built the model from generic parts, so other lane-changing algorithms can be plugged into the same framework.&lt;/li>
+&lt;li>The work was published in the Journal of Signal Processing Systems in 2026.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Probabilistic Model Checking&lt;/li>
+&lt;li>PRISM&lt;/li>
+&lt;li>Markov Decision Processes&lt;/li>
+&lt;li>PCTL&lt;/li>
+&lt;/ul></description></item><item><title>Formal Analysis of Lane-Changing Algorithms using Probabilistic Model Checking</title><link>https://bilalsarwar071.github.io/publication/lane-changing-model-checking/</link><pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/publication/lane-changing-model-checking/</guid><description/></item></channel></rss>

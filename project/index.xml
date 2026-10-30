@@ -1,121 +1,152 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Projects | Muhammad Bilal Sarwar</title>
-    <link>http://localhost:1313/project/</link>
-      <atom:link href="http://localhost:1313/project/index.xml" rel="self" type="application/rss+xml" />
-    <description>Projects</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_ef8be4a73e75cc6b.png</url>
-      <title>Projects</title>
-      <link>http://localhost:1313/project/</link>
-    </image>
-    
-    <item>
-      <title>Text Categorization Using Encoder only Transformer</title>
-      <link>http://localhost:1313/project/text-classification/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/text-classification/</guid>
-      <description>&lt;h2 id=&#34;institution&#34;&gt;Institution&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;Dec 2023 - Jan 2024&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt;
-&lt;p&gt;The goal here was to sort text into a fixed set of categories automatically. I used an encoder-only transformer, the same family as BERT, because it builds a representation of the whole input, which suits classification well.&lt;/p&gt;
-&lt;h2 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Built a text categorization model on an encoder-only transformer architecture.&lt;/li&gt;
-&lt;li&gt;Evaluated and fine-tuned the model so it categorized a varied mix of text reliably.&lt;/li&gt;
-&lt;li&gt;Implemented everything in Python with Hugging Face Transformers and scikit-learn.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;technical-skills-acquired&#34;&gt;Technical Skills Acquired&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Python&lt;/li&gt;
-&lt;li&gt;Natural Language Processing (NLP)&lt;/li&gt;
-&lt;li&gt;Transformers&lt;/li&gt;
-&lt;li&gt;Text Classification&lt;/li&gt;
-&lt;li&gt;Machine Learning&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Sentiment Analysis Using BERT</title>
-      <link>http://localhost:1313/project/sentiment-analysis/</link>
-      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/sentiment-analysis/</guid>
-      <description>&lt;h2 id=&#34;institution&#34;&gt;Institution&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;Oct 2023 - Dec 2023&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt;
-&lt;p&gt;For this project I built a sentiment classifier using BERT (Bidirectional Encoder Representations from Transformers). BERT reads each word in the context of the whole sentence, which matters a lot for sentiment, where a single word like &amp;ldquo;not&amp;rdquo; can flip the meaning.&lt;/p&gt;
-&lt;h2 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Fine-tuned pre-trained BERT models for sentiment classification instead of training from scratch.&lt;/li&gt;
-&lt;li&gt;Prepared the text data with standard NLP preprocessing before training.&lt;/li&gt;
-&lt;li&gt;Wrote the pipeline in Python using HuggingFace Transformers and TensorFlow.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;technical-skills-acquired&#34;&gt;Technical Skills Acquired&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Python&lt;/li&gt;
-&lt;li&gt;Natural Language Processing (NLP)&lt;/li&gt;
-&lt;li&gt;BERT&lt;/li&gt;
-&lt;li&gt;Machine Learning&lt;/li&gt;
-&lt;li&gt;Data Preprocessing&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Car Price Prediction Using Machine Learning Techniques</title>
-      <link>http://localhost:1313/project/car-price/</link>
-      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/car-price/</guid>
-      <description>&lt;p&gt;In this project I helped build a machine learning model that predicts the price of a car from a wide range of its features.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Multiclass Image Classification using Transfer Learning</title>
-      <link>http://localhost:1313/project/image-classification/</link>
-      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/image-classification/</guid>
-      <description>&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt;
-&lt;p&gt;I built a multiclass image classifier on top of InceptionResNetV2. Rather than training a large network from scratch, I started from a pre-trained model and reused what it had already learned, then trained it to recognize my own set of classes.&lt;/p&gt;
-&lt;h2 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Used InceptionResNetV2 as the base model and adapted it to the target classes through transfer learning.&lt;/li&gt;
-&lt;li&gt;Added data augmentation and input normalization so the model would do better on images it had not seen during training.&lt;/li&gt;
-&lt;li&gt;Wrote the full training and evaluation pipeline in Python.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;technical-skills-acquired&#34;&gt;Technical Skills Acquired&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Python&lt;/li&gt;
-&lt;li&gt;Deep Learning&lt;/li&gt;
-&lt;li&gt;Transfer Learning&lt;/li&gt;
-&lt;li&gt;Computer Vision&lt;/li&gt;
-&lt;li&gt;Data Augmentation&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Adaptive Irrigated Agriculture Monitoring (Embedded &#43; Cloud)</title>
-      <link>http://localhost:1313/project/irrigation-monitoring/</link>
-      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/irrigation-monitoring/</guid>
-      <description>&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt;
-&lt;p&gt;This was an IoT system for keeping track of conditions in the field. Embedded sensor nodes measured soil and air conditions and sent the readings to the cloud in real time, so irrigation could follow what the crop actually needed instead of a fixed schedule.&lt;/p&gt;
-&lt;h2 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Built the embedded sensor setup that reads soil and air conditions.&lt;/li&gt;
-&lt;li&gt;Connected the sensor nodes to the cloud for real-time monitoring.&lt;/li&gt;
-&lt;li&gt;Used the incoming data to decide when and how much to irrigate.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;technical-skills-acquired&#34;&gt;Technical Skills Acquired&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Embedded Systems&lt;/li&gt;
-&lt;li&gt;IoT&lt;/li&gt;
-&lt;li&gt;Sensors&lt;/li&gt;
-&lt;li&gt;Cloud Integration&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects | Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/project/</link><atom:link href="https://bilalsarwar071.github.io/project/index.xml" rel="self" type="application/rss+xml"/><description>Projects</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_ef8be4a73e75cc6b.png</url><title>Projects</title><link>https://bilalsarwar071.github.io/project/</link></image><item><title>Formal Verification of Lane-Changing Algorithms</title><link>https://bilalsarwar071.github.io/project/lane-changing-verification/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/lane-changing-verification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>System Analysis and Verification (SAVe) Lab, SEECS, NUST&lt;/strong>&lt;br>
+&lt;em>Jan 2024 - Jan 2025&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>Lane changing is one of the most complex things an autonomous vehicle does, and it is usually checked in simulation, which can miss rare corner cases. For my MS thesis I analyzed lane-changing algorithms formally instead, so the results hold for every behavior the model allows, not just the runs we happened to simulate.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Modeled the MOBIL lane-changing algorithm together with the Intelligent Driver Model as a Markov Decision Process.&lt;/li>
+&lt;li>Wrote safety, lane-change efficiency, timing and robustness requirements in PCTL and checked them with the PRISM probabilistic model checker.&lt;/li>
+&lt;li>Built the model from generic parts, so other lane-changing algorithms can be plugged into the same framework.&lt;/li>
+&lt;li>The work was published in the Journal of Signal Processing Systems in 2026.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Probabilistic Model Checking&lt;/li>
+&lt;li>PRISM&lt;/li>
+&lt;li>Markov Decision Processes&lt;/li>
+&lt;li>PCTL&lt;/li>
+&lt;/ul></description></item><item><title>LLM-Guided Heuristics for SAT Solvers</title><link>https://bilalsarwar071.github.io/project/llm-sat-heuristics/</link><pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/llm-sat-heuristics/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>System Analysis and Verification (SAVe) Lab, SEECS, NUST&lt;/strong>&lt;br>
+&lt;em>Jun 2025 - Present&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>SAT solvers depend on carefully tuned heuristics. In this project I look at whether large language models can help design them, without fine-tuning the model itself. A lot of recent work lets the model reflect on its earlier attempts, so we also asked a simple question: does that reflection actually help?&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Developing neuro-symbolic frameworks that combine LLMs with SAT solver heuristics.&lt;/li>
+&lt;li>Ran a placebo-controlled study to test whether LLM reflection really improves the heuristics it produces.&lt;/li>
+&lt;li>Evolved phase-initialisation heuristics for CaDiCaL. The best ones ran 48% faster on the DFVS benchmarks and 37% faster on the decision-tree benchmarks than the best default setup.&lt;/li>
+&lt;li>The manuscript is complete, with Osman Hasan and S. Abed.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>SAT Solving&lt;/li>
+&lt;li>CaDiCaL&lt;/li>
+&lt;li>Large Language Models&lt;/li>
+&lt;li>Experimental Design&lt;/li>
+&lt;/ul></description></item><item><title>OpenStack GPU Cloud for Precision Agriculture</title><link>https://bilalsarwar071.github.io/project/openstack-gpu-cloud/</link><pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/openstack-gpu-cloud/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>GreenAI (Precision Agriculture), HPC Department, NASTP, Rawalpindi&lt;/strong>&lt;br>
+&lt;em>Feb 2026 - Present&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>GreenAI&amp;rsquo;s precision agriculture teams and its IaaS clients needed a place to run their workloads, including GPU-heavy ones. I built that platform and now look after it.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Deployed OpenStack across more than 20 bare metal nodes using MAAS, Sunbeam, Juju, MicroCeph and OVN.&lt;/li>
+&lt;li>Set up Kubernetes with GPU passthrough and provisioned GPU virtual machines for internal teams and clients.&lt;/li>
+&lt;li>Moved vendor-provided and in-house applications from testing into a secure production environment, with CI/CD pipelines, rollback procedures and automated nightly backups.&lt;/li>
+&lt;li>Lead the HPC administration team, review configuration changes and plan the 24/7 shift roster.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>OpenStack&lt;/li>
+&lt;li>Kubernetes&lt;/li>
+&lt;li>Ceph and OVN&lt;/li>
+&lt;li>CI/CD&lt;/li>
+&lt;/ul></description></item><item><title>Out-of-Distribution Detection in Encrypted Video Traffic</title><link>https://bilalsarwar071.github.io/project/encrypted-traffic-ood/</link><pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/encrypted-traffic-ood/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>Data Science &amp;amp; Machine Learning Lab, SINES, NUST&lt;/strong>&lt;br>
+&lt;em>Feb 2025 - May 2025&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>Video traffic is encrypted, so a classifier only sees patterns in the packets, not the content. It also needs to notice when traffic does not look like anything it was trained on, instead of confidently guessing. I led the lab&amp;rsquo;s project on this out-of-distribution (OOD) detection problem for encrypted YouTube traffic.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Designed the data pipelines and the deep learning models.&lt;/li>
+&lt;li>Wrote the first draft of the paper, &amp;ldquo;Unified Framework for YouTube Traffic Classification and Out-of-Distribution Detection in Encrypted Networks&amp;rdquo;, which the lab plans to resubmit.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Deep Learning&lt;/li>
+&lt;li>Out-of-Distribution Detection&lt;/li>
+&lt;li>Network Traffic Analysis&lt;/li>
+&lt;/ul></description></item><item><title>IoT Monitoring of Dengue and Zika Mosquitoes</title><link>https://bilalsarwar071.github.io/project/dengue-iot-monitoring/</link><pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/dengue-iot-monitoring/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>Geo Visual Analytics Lab, IGIS, NUST&lt;/strong>&lt;br>
+&lt;em>May 2023 - Dec 2023&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>Dengue and Zika are spread by mosquitoes, and knowing where those mosquitoes are helps predict where an outbreak is likely. This project built an IoT system to monitor them automatically.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Built the real-time data collection setup on Raspberry Pi devices.&lt;/li>
+&lt;li>Used OpenCV and machine learning to detect mosquitoes in the captured images.&lt;/li>
+&lt;li>Ran a four-week workshop on Python for computer vision.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Raspberry Pi&lt;/li>
+&lt;li>OpenCV&lt;/li>
+&lt;li>Machine Learning&lt;/li>
+&lt;li>IoT&lt;/li>
+&lt;/ul></description></item><item><title>Text Categorization Using Encoder only Transformer</title><link>https://bilalsarwar071.github.io/project/text-classification/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/text-classification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
+&lt;em>Dec 2023 - Jan 2024&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>The goal here was to sort text into a fixed set of categories automatically. I used an encoder-only transformer, the same family as BERT, because it builds a representation of the whole input, which suits classification well.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Built a text categorization model on an encoder-only transformer architecture.&lt;/li>
+&lt;li>Evaluated and fine-tuned the model so it categorized a varied mix of text reliably.&lt;/li>
+&lt;li>Implemented everything in Python with Hugging Face Transformers and scikit-learn.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Python&lt;/li>
+&lt;li>Natural Language Processing (NLP)&lt;/li>
+&lt;li>Transformers&lt;/li>
+&lt;li>Text Classification&lt;/li>
+&lt;li>Machine Learning&lt;/li>
+&lt;/ul></description></item><item><title>Sentiment Analysis Using BERT</title><link>https://bilalsarwar071.github.io/project/sentiment-analysis/</link><pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/sentiment-analysis/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
+&lt;em>Oct 2023 - Dec 2023&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>For this project I built a sentiment classifier using BERT (Bidirectional Encoder Representations from Transformers). BERT reads each word in the context of the whole sentence, which matters a lot for sentiment, where a single word like &amp;ldquo;not&amp;rdquo; can flip the meaning.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Fine-tuned pre-trained BERT models for sentiment classification instead of training from scratch.&lt;/li>
+&lt;li>Prepared the text data with standard NLP preprocessing before training.&lt;/li>
+&lt;li>Wrote the pipeline in Python using HuggingFace Transformers and TensorFlow.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Python&lt;/li>
+&lt;li>Natural Language Processing (NLP)&lt;/li>
+&lt;li>BERT&lt;/li>
+&lt;li>Machine Learning&lt;/li>
+&lt;li>Data Preprocessing&lt;/li>
+&lt;/ul></description></item><item><title>Car Price Prediction Using Machine Learning Techniques</title><link>https://bilalsarwar071.github.io/project/car-price/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/car-price/</guid><description>&lt;p>In this project I helped build a machine learning model that predicts the price of a car from a wide range of its features.&lt;/p></description></item><item><title>Multiclass Image Classification using Transfer Learning</title><link>https://bilalsarwar071.github.io/project/image-classification/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/image-classification/</guid><description>&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>I built a multiclass image classifier on top of InceptionResNetV2. Rather than training a large network from scratch, I started from a pre-trained model and reused what it had already learned, then trained it to recognize my own set of classes.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Used InceptionResNetV2 as the base model and adapted it to the target classes through transfer learning.&lt;/li>
+&lt;li>Added data augmentation and input normalization so the model would do better on images it had not seen during training.&lt;/li>
+&lt;li>Wrote the full training and evaluation pipeline in Python.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Python&lt;/li>
+&lt;li>Deep Learning&lt;/li>
+&lt;li>Transfer Learning&lt;/li>
+&lt;li>Computer Vision&lt;/li>
+&lt;li>Data Augmentation&lt;/li>
+&lt;/ul></description></item><item><title>Adaptive Irrigated Agriculture Monitoring (Embedded + Cloud)</title><link>https://bilalsarwar071.github.io/project/irrigation-monitoring/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/irrigation-monitoring/</guid><description>&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>This was an IoT system for keeping track of conditions in the field. Embedded sensor nodes measured soil and air conditions and sent the readings to the cloud in real time, so irrigation could follow what the crop actually needed instead of a fixed schedule.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Built the embedded sensor setup that reads soil and air conditions.&lt;/li>
+&lt;li>Connected the sensor nodes to the cloud for real-time monitoring.&lt;/li>
+&lt;li>Used the incoming data to decide when and how much to irrigate.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Embedded Systems&lt;/li>
+&lt;li>IoT&lt;/li>
+&lt;li>Sensors&lt;/li>
+&lt;li>Cloud Integration&lt;/li>
+&lt;/ul></description></item></channel></rss>

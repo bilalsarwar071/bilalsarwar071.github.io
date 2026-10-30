@@ -1,416 +1,365 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Muhammad Bilal Sarwar</title>
-    <link>http://localhost:1313/</link>
-      <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <description>Muhammad Bilal Sarwar</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_ef8be4a73e75cc6b.png</url>
-      <title>Muhammad Bilal Sarwar</title>
-      <link>http://localhost:1313/</link>
-    </image>
-    
-    <item>
-      <title>Interactive Formal Verification Lab</title>
-      <link>http://localhost:1313/playground/</link>
-      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/playground/</guid>
-      <description>&lt;p&gt;I built these three tools to show how some of the ideas I work with actually behave. They are small, but they are real: the model checker explores every reachable state and checks your formula with the standard labelling algorithm, and the verifier computes weakest preconditions for whatever conditions you type in. Everything runs in your browser, so feel free to break things.&lt;/p&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/fv_playground.css?v=e248c122&#34;&gt;
-
-&lt;div class=&#34;fv-playground-wrapper not-prose&#34; id=&#34;fv-lab&#34;&gt;
-  
-  &lt;div class=&#34;fv-tabs&#34; role=&#34;tablist&#34;&gt;
-    &lt;button type=&#34;button&#34; class=&#34;fv-tab-btn active&#34; role=&#34;tab&#34; aria-selected=&#34;true&#34; data-tab=&#34;sat-solver&#34;&gt;
-      &lt;span class=&#34;tab-icon&#34;&gt;⚡&lt;/span&gt; DPLL SAT Solver
-    &lt;/button&gt;
-    &lt;button type=&#34;button&#34; class=&#34;fv-tab-btn&#34; role=&#34;tab&#34; aria-selected=&#34;false&#34; data-tab=&#34;model-checker&#34;&gt;
-      &lt;span class=&#34;tab-icon&#34;&gt;🛡️&lt;/span&gt; CTL Model Checker
-    &lt;/button&gt;
-    &lt;button type=&#34;button&#34; class=&#34;fv-tab-btn&#34; role=&#34;tab&#34; aria-selected=&#34;false&#34; data-tab=&#34;hoare-logic&#34;&gt;
-      &lt;span class=&#34;tab-icon&#34;&gt;🔍&lt;/span&gt; Hoare Logic Verifier
-    &lt;/button&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&#34;fv-card&#34;&gt;
-
-    
-    &lt;div id=&#34;sat-solver&#34; class=&#34;fv-tab-content active&#34; role=&#34;tabpanel&#34;&gt;
-      &lt;div class=&#34;fv-grid&#34;&gt;
-        &lt;div class=&#34;fv-control-panel&#34;&gt;
-          &lt;h3 class=&#34;panel-title&#34;&gt;Solver Controls&lt;/h3&gt;
-
-          &lt;div class=&#34;form-group&#34;&gt;
-            &lt;label for=&#34;sat-presets&#34;&gt;Formula&lt;/label&gt;
-            &lt;select id=&#34;sat-presets&#34;&gt;
-              &lt;option value=&#34;sat-simple&#34;&gt;Satisfiable: (A ∨ B) ∧ (¬A ∨ C) ∧ (¬B ∨ ¬C)&lt;/option&gt;
-              &lt;option value=&#34;unsat-simple&#34;&gt;Unsatisfiable: all four clauses over A and B&lt;/option&gt;
-              &lt;option value=&#34;chain&#34;&gt;Implication chain: refuted by propagation alone&lt;/option&gt;
-              &lt;option value=&#34;php-3-2&#34;&gt;Pigeonhole: 3 pigeons, 2 holes (unsatisfiable)&lt;/option&gt;
-              &lt;option value=&#34;custom&#34;&gt;Write your own CNF formula...&lt;/option&gt;
-            &lt;/select&gt;
-          &lt;/div&gt;
-
-          &lt;div id=&#34;sat-custom-container&#34; class=&#34;form-group hidden&#34;&gt;
-            &lt;label for=&#34;sat-custom-input&#34;&gt;Your formula in CNF&lt;/label&gt;
-            &lt;input type=&#34;text&#34; id=&#34;sat-custom-input&#34; class=&#34;mono-input&#34; placeholder=&#34;(A | B) &amp; (~A | C) &amp; (~B | ~C)&#34; spellcheck=&#34;false&#34; autocomplete=&#34;off&#34;&gt;
-            &lt;p class=&#34;hint-text&#34;&gt;Join clauses with &amp;amp; and literals with |. Negate with ~ or !. Up to 12 variables.&lt;/p&gt;
-            &lt;div id=&#34;sat-parse-error&#34; class=&#34;error-text&#34;&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&#34;control-buttons&#34;&gt;
-            &lt;button type=&#34;button&#34; class=&#34;btn btn-primary&#34; id=&#34;btn-sat-solve&#34;&gt;Solve&lt;/button&gt;
-            &lt;button type=&#34;button&#34; class=&#34;btn btn-secondary&#34; id=&#34;btn-sat-step&#34;&gt;Step&lt;/button&gt;
-            &lt;button type=&#34;button&#34; class=&#34;btn btn-accent&#34; id=&#34;btn-sat-run&#34;&gt;Auto run&lt;/button&gt;
-            &lt;button type=&#34;button&#34; class=&#34;btn btn-danger&#34; id=&#34;btn-sat-reset&#34;&gt;Reset&lt;/button&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&#34;speed-control&#34;&gt;
-            &lt;label for=&#34;sat-speed&#34;&gt;Auto run speed&lt;/label&gt;
-            &lt;input type=&#34;range&#34; id=&#34;sat-speed&#34; min=&#34;100&#34; max=&#34;2000&#34; value=&#34;700&#34; step=&#34;100&#34;&gt;
-            &lt;span class=&#34;speed-label&#34;&gt;&lt;/span&gt;
-          &lt;/div&gt;
-
-          &lt;div&gt;
-            &lt;h4 class=&#34;sub-panel-title&#34;&gt;Assignment&lt;/h4&gt;
-            &lt;div id=&#34;sat-assignments&#34; class=&#34;assignment-list&#34;&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&#34;console-panel&#34;&gt;
-            &lt;h4 class=&#34;sub-panel-title&#34;&gt;Solver log&lt;/h4&gt;
-            &lt;div id=&#34;sat-logs&#34; class=&#34;console-log&#34; aria-live=&#34;polite&#34;&gt;&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&#34;fv-visual-panel&#34;&gt;
-          &lt;div class=&#34;panel-header-toolbar&#34;&gt;
-            &lt;span class=&#34;panel-subtitle&#34;&gt;Clauses and search tree&lt;/span&gt;
-            &lt;span id=&#34;sat-status&#34; class=&#34;badge badge-neutral&#34;&gt;IDLE&lt;/span&gt;
-          &lt;/div&gt;
-
-          &lt;div id=&#34;sat-stats&#34; class=&#34;stats-row&#34;&gt;&lt;/div&gt;
-
-          &lt;div&gt;
-            &lt;h4 class=&#34;sub-panel-title&#34;&gt;Clauses&lt;/h4&gt;
-            &lt;div id=&#34;sat-formula-clauses&#34; class=&#34;clause-box&#34;&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&#34;tree-container&#34;&gt;
-            &lt;h4 class=&#34;sub-panel-title&#34;&gt;Search tree&lt;/h4&gt;
-            &lt;div class=&#34;tree-canvas-wrapper&#34;&gt;
-              &lt;svg id=&#34;sat-tree-svg&#34; viewBox=&#34;0 0 500 260&#34; preserveAspectRatio=&#34;xMidYMin meet&#34; role=&#34;img&#34; aria-label=&#34;DPLL search tree&#34;&gt;&lt;/svg&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&#34;legend-box&#34;&gt;
-            &lt;span class=&#34;legend-item&#34;&gt;&lt;span class=&#34;legend-shape legend-circle&#34;&gt;&lt;/span&gt; Decision&lt;/span&gt;
-            &lt;span class=&#34;legend-item&#34;&gt;&lt;span class=&#34;legend-shape legend-diamond&#34;&gt;&lt;/span&gt; Forced by unit propagation&lt;/span&gt;
-            &lt;span class=&#34;legend-item&#34;&gt;&lt;span class=&#34;legend-color conflict-color&#34;&gt;&lt;/span&gt; Conflict or dead end&lt;/span&gt;
-            &lt;span class=&#34;legend-item&#34;&gt;&lt;span class=&#34;legend-color sat-color&#34;&gt;&lt;/span&gt; Satisfying path&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    
-    &lt;div id=&#34;model-checker&#34; class=&#34;fv-tab-content&#34; role=&#34;tabpanel&#34;&gt;
-      &lt;div class=&#34;fv-grid&#34;&gt;
-        &lt;div class=&#34;fv-control-panel&#34;&gt;
-          &lt;h3 class=&#34;panel-title&#34;&gt;Model Checking&lt;/h3&gt;
-
-          &lt;div class=&#34;form-group&#34;&gt;
-            &lt;label for=&#34;mc-system&#34;&gt;System&lt;/label&gt;
-            &lt;select id=&#34;mc-system&#34;&gt;
-              &lt;option value=&#34;peterson&#34;&gt;Peterson&#39;s mutual exclusion&lt;/option&gt;
-              &lt;option value=&#34;flags-only&#34;&gt;Flags only, no turn variable&lt;/option&gt;
-              &lt;option value=&#34;naive-lock&#34;&gt;Naive lock: check first, then set&lt;/option&gt;
-              &lt;option value=&#34;traffic&#34;&gt;Traffic light controller&lt;/option&gt;
-            &lt;/select&gt;
-            &lt;p id=&#34;mc-blurb&#34; class=&#34;hint-text&#34;&gt;&lt;/p&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&#34;form-group&#34;&gt;
-            &lt;label for=&#34;mc-property&#34;&gt;CTL property&lt;/label&gt;
-            &lt;select id=&#34;mc-property&#34;&gt;&lt;/select&gt;
-            &lt;input type=&#34;text&#34; id=&#34;mc-custom&#34; class=&#34;mono-input hidden&#34; spellcheck=&#34;false&#34; autocomplete=&#34;off&#34; aria-label=&#34;Custom CTL formula&#34;&gt;
-            &lt;div id=&#34;mc-error&#34; class=&#34;error-text&#34;&gt;&lt;/div&gt;
-            &lt;details class=&#34;syntax-help&#34;&gt;
-              &lt;summary&gt;Formula syntax&lt;/summary&gt;
-              &lt;p&gt;Atoms compare a variable with a value, like &lt;code&gt;pc0 = WAIT&lt;/code&gt; or &lt;code&gt;turn != 1&lt;/code&gt;. Booleans can stand alone, like &lt;code&gt;flag0&lt;/code&gt; or &lt;code&gt;deadlock&lt;/code&gt;.&lt;/p&gt;
-              &lt;p&gt;Connectives: &lt;code&gt;!&lt;/code&gt; &lt;code&gt;&amp;amp;&lt;/code&gt; &lt;code&gt;|&lt;/code&gt; &lt;code&gt;-&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;-&amp;gt;&lt;/code&gt;. Temporal operators: &lt;code&gt;AX EX AF EF AG EG&lt;/code&gt;, plus &lt;code&gt;A[p U q]&lt;/code&gt; and &lt;code&gt;E[p U q]&lt;/code&gt;.&lt;/p&gt;
-            &lt;/details&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&#34;control-buttons&#34;&gt;
-            &lt;button type=&#34;button&#34; class=&#34;btn btn-primary&#34; id=&#34;btn-mc-verify&#34;&gt;Verify&lt;/button&gt;
-            &lt;button type=&#34;button&#34; class=&#34;btn btn-secondary&#34; id=&#34;btn-mc-step&#34;&gt;Step&lt;/button&gt;
-            &lt;button type=&#34;button&#34; class=&#34;btn btn-accent&#34; id=&#34;btn-mc-simulate&#34;&gt;Simulate&lt;/button&gt;
-            &lt;button type=&#34;button&#34; class=&#34;btn btn-danger&#34; id=&#34;btn-mc-reset&#34;&gt;Reset&lt;/button&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&#34;speed-control&#34;&gt;
-            &lt;label for=&#34;mc-speed&#34;&gt;Simulation speed&lt;/label&gt;
-            &lt;input type=&#34;range&#34; id=&#34;mc-speed&#34; min=&#34;100&#34; max=&#34;1500&#34; value=&#34;600&#34; step=&#34;100&#34;&gt;
-            &lt;span class=&#34;speed-label&#34;&gt;&lt;/span&gt;
-          &lt;/div&gt;
-
-          &lt;div id=&#34;mc-verdict&#34; class=&#34;verdict-box hidden&#34; aria-live=&#34;polite&#34;&gt;&lt;/div&gt;
-
-          &lt;div&gt;
-            &lt;h4 class=&#34;sub-panel-title&#34;&gt;Current state: &lt;span id=&#34;mc-current-name&#34;&gt;S0&lt;/span&gt;&lt;/h4&gt;
-            &lt;div id=&#34;mc-state-vars&#34; class=&#34;state-variables&#34;&gt;&lt;/div&gt;
-            &lt;div id=&#34;mc-moves&#34; class=&#34;moves-list&#34;&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&#34;console-panel&#34;&gt;
-            &lt;h4 class=&#34;sub-panel-title&#34;&gt;Model checker log&lt;/h4&gt;
-            &lt;div id=&#34;mc-logs&#34; class=&#34;console-log&#34; aria-live=&#34;polite&#34;&gt;&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&#34;fv-visual-panel&#34;&gt;
-          &lt;div class=&#34;panel-header-toolbar&#34;&gt;
-            &lt;span class=&#34;panel-subtitle&#34;&gt;Reachable states&lt;/span&gt;
-            &lt;span id=&#34;mc-status&#34; class=&#34;badge badge-neutral&#34;&gt;IDLE&lt;/span&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&#34;kripke-container&#34;&gt;
-            &lt;div class=&#34;graph-canvas-wrapper&#34;&gt;
-              &lt;svg id=&#34;mc-graph-svg&#34; viewBox=&#34;0 0 550 450&#34; preserveAspectRatio=&#34;xMidYMid meet&#34; role=&#34;img&#34; aria-label=&#34;Kripke structure of the selected system&#34;&gt;&lt;/svg&gt;
-            &lt;/div&gt;
-            &lt;p class=&#34;hint-text&#34;&gt;Hover a state or an arrow for details. Click a state one step away from the current one to move there.&lt;/p&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&#34;legend-box&#34;&gt;
-            &lt;span class=&#34;legend-item&#34;&gt;&lt;span class=&#34;legend-color init-color&#34;&gt;&lt;/span&gt; Initial state&lt;/span&gt;
-            &lt;span class=&#34;legend-item&#34;&gt;&lt;span class=&#34;legend-color sat-color&#34;&gt;&lt;/span&gt; Satisfies the formula&lt;/span&gt;
-            &lt;span class=&#34;legend-item&#34;&gt;&lt;span class=&#34;legend-color current-color&#34;&gt;&lt;/span&gt; Current state&lt;/span&gt;
-            &lt;span class=&#34;legend-item&#34;&gt;&lt;span class=&#34;legend-color counter-color&#34;&gt;&lt;/span&gt; Counterexample&lt;/span&gt;
-            &lt;span class=&#34;legend-item&#34;&gt;&lt;span class=&#34;legend-color witness-color&#34;&gt;&lt;/span&gt; Witness&lt;/span&gt;
-            &lt;span class=&#34;legend-item&#34;&gt;&lt;span class=&#34;legend-color deadlock-color&#34;&gt;&lt;/span&gt; Deadlock&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    
-    &lt;div id=&#34;hoare-logic&#34; class=&#34;fv-tab-content&#34; role=&#34;tabpanel&#34;&gt;
-      &lt;div class=&#34;fv-grid&#34;&gt;
-        &lt;div class=&#34;fv-control-panel&#34;&gt;
-          &lt;h3 class=&#34;panel-title&#34;&gt;Program Verification&lt;/h3&gt;
-
-          &lt;div class=&#34;form-group&#34;&gt;
-            &lt;label for=&#34;hl-presets&#34;&gt;Program&lt;/label&gt;
-            &lt;select id=&#34;hl-presets&#34;&gt;
-              &lt;option value=&#34;abs&#34;&gt;Absolute value&lt;/option&gt;
-              &lt;option value=&#34;swap&#34;&gt;Swap two variables (has a bug)&lt;/option&gt;
-              &lt;option value=&#34;sum&#34;&gt;Sum of 1 to N (loop)&lt;/option&gt;
-              &lt;option value=&#34;div&#34;&gt;Integer division (loop)&lt;/option&gt;
-            &lt;/select&gt;
-            &lt;p id=&#34;hl-hint&#34; class=&#34;hint-text&#34;&gt;&lt;/p&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&#34;form-group&#34;&gt;
-            &lt;label for=&#34;hl-pre&#34;&gt;Precondition P&lt;/label&gt;
-            &lt;input type=&#34;text&#34; id=&#34;hl-pre&#34; class=&#34;mono-input&#34; spellcheck=&#34;false&#34; autocomplete=&#34;off&#34;&gt;
-          &lt;/div&gt;
-          &lt;div class=&#34;form-group&#34; id=&#34;hl-inv-group&#34;&gt;
-            &lt;label for=&#34;hl-inv&#34;&gt;Loop invariant I&lt;/label&gt;
-            &lt;input type=&#34;text&#34; id=&#34;hl-inv&#34; class=&#34;mono-input&#34; spellcheck=&#34;false&#34; autocomplete=&#34;off&#34;&gt;
-          &lt;/div&gt;
-          &lt;div class=&#34;form-group&#34;&gt;
-            &lt;label for=&#34;hl-post&#34;&gt;Postcondition Q&lt;/label&gt;
-            &lt;input type=&#34;text&#34; id=&#34;hl-post&#34; class=&#34;mono-input&#34; spellcheck=&#34;false&#34; autocomplete=&#34;off&#34;&gt;
-          &lt;/div&gt;
-          &lt;div id=&#34;hl-error&#34; class=&#34;error-text&#34;&gt;&lt;/div&gt;
-
-          &lt;div class=&#34;control-buttons&#34;&gt;
-            &lt;button type=&#34;button&#34; class=&#34;btn btn-primary&#34; id=&#34;btn-hl-check&#34;&gt;Check VCs&lt;/button&gt;
-            &lt;button type=&#34;button&#34; class=&#34;btn btn-secondary&#34; id=&#34;btn-hl-step&#34;&gt;Step&lt;/button&gt;
-            &lt;button type=&#34;button&#34; class=&#34;btn btn-danger btn-wide&#34; id=&#34;btn-hl-reset&#34;&gt;Reset&lt;/button&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&#34;console-panel&#34;&gt;
-            &lt;h4 class=&#34;sub-panel-title&#34;&gt;Weakest precondition trace&lt;/h4&gt;
-            &lt;div id=&#34;hl-logs&#34; class=&#34;console-log tall&#34; aria-live=&#34;polite&#34;&gt;&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&#34;fv-visual-panel&#34;&gt;
-          &lt;div class=&#34;panel-header-toolbar&#34;&gt;
-            &lt;span class=&#34;panel-subtitle&#34;&gt;Annotated program and verification conditions&lt;/span&gt;
-            &lt;span id=&#34;hl-status&#34; class=&#34;badge badge-neutral&#34;&gt;IDLE&lt;/span&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&#34;code-verification-grid&#34;&gt;
-            &lt;div class=&#34;code-editor-mock&#34;&gt;
-              &lt;h4 class=&#34;sub-panel-title&#34;&gt;Program&lt;/h4&gt;
-              &lt;div id=&#34;hl-code-display&#34; class=&#34;code-lines-box&#34;&gt;&lt;/div&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&#34;vc-proof-panel&#34;&gt;
-              &lt;h4 class=&#34;sub-panel-title&#34;&gt;Verification conditions&lt;/h4&gt;
-              &lt;div id=&#34;hl-vc-list&#34; class=&#34;vc-list-box&#34;&gt;&lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;p class=&#34;hint-text&#34;&gt;VCs are checked by trying every integer combination in a small range, so a pass is strong evidence rather than a proof. Only partial correctness is checked here, not termination.&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script src=&#34;http://localhost:1313/js/fv_playground.js?v=806596df&#34;&gt;&lt;/script&gt;
-
-&lt;h2 id=&#34;what-you-are-looking-at&#34;&gt;What you are looking at&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;DPLL SAT solver.&lt;/strong&gt; A SAT solver decides whether a propositional formula has a satisfying assignment. DPLL guesses a value for one variable, follows every consequence it is forced into (unit propagation), and backtracks when a clause becomes false. The tree shows guesses as circles and forced assignments as diamonds. The pigeonhole example is worth stepping through: you cannot put three pigeons into two holes without two of them sharing, and the solver has to rule out every option before it can say so.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;CTL model checker.&lt;/strong&gt; The four systems are written as small guarded-command programs. The checker builds every reachable state from them, then works out which states satisfy each part of your formula, from the inside out. Press Step to watch that happen one subformula at a time. When a property fails you get a counterexample run, and for properties like EF you get a witness. Peterson&amp;rsquo;s algorithm passes everything. Remove the turn variable and it still keeps the processes apart, but it can deadlock. The naive lock fails at the most basic job, and the checker shows you the exact interleaving that breaks it.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Hoare logic verifier.&lt;/strong&gt; A Hoare triple {P} S {Q} says that if P holds before program S runs, then Q holds after it. The verifier works backwards from Q, computing the weakest precondition of each statement, and turns the result into verification conditions (VCs). Loops need an invariant, which you provide. You can edit any of the conditions. Try weakening an invariant and see which VC breaks, and what counterexample it gives you.&lt;/p&gt;
-&lt;h2 id=&#34;why-this-matters&#34;&gt;Why this matters&lt;/h2&gt;
-&lt;p&gt;Testing can show that a program works on the inputs you tried. Formal verification aims to show that it works on all of them, or to find the case where it does not. That is why these ideas show up wherever failures are expensive: hardware design, operating system kernels like seL4, flight software and communication protocols. Real tools are far more capable than these toys, but the core ideas are the same.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Formal Analysis of Lane-Changing Algorithms using Probabilistic Model Checking</title>
-      <link>http://localhost:1313/publication/lane-changing-model-checking/</link>
-      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/publication/lane-changing-model-checking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Revolutionizing ICT with AI and ML: A Comprehensive Study of Current Applications and Future Potential</title>
-      <link>http://localhost:1313/publication/journal-article/</link>
-      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/publication/journal-article/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>http://localhost:1313/projects/</link>
-      <pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Text Categorization Using Encoder only Transformer</title>
-      <link>http://localhost:1313/project/text-classification/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/text-classification/</guid>
-      <description>&lt;h2 id=&#34;institution&#34;&gt;Institution&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;Dec 2023 - Jan 2024&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt;
-&lt;p&gt;The goal here was to sort text into a fixed set of categories automatically. I used an encoder-only transformer, the same family as BERT, because it builds a representation of the whole input, which suits classification well.&lt;/p&gt;
-&lt;h2 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Built a text categorization model on an encoder-only transformer architecture.&lt;/li&gt;
-&lt;li&gt;Evaluated and fine-tuned the model so it categorized a varied mix of text reliably.&lt;/li&gt;
-&lt;li&gt;Implemented everything in Python with Hugging Face Transformers and scikit-learn.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;technical-skills-acquired&#34;&gt;Technical Skills Acquired&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Python&lt;/li&gt;
-&lt;li&gt;Natural Language Processing (NLP)&lt;/li&gt;
-&lt;li&gt;Transformers&lt;/li&gt;
-&lt;li&gt;Text Classification&lt;/li&gt;
-&lt;li&gt;Machine Learning&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Sentiment Analysis Using BERT</title>
-      <link>http://localhost:1313/project/sentiment-analysis/</link>
-      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/sentiment-analysis/</guid>
-      <description>&lt;h2 id=&#34;institution&#34;&gt;Institution&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong&gt;&lt;br&gt;
-&lt;em&gt;Oct 2023 - Dec 2023&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt;
-&lt;p&gt;For this project I built a sentiment classifier using BERT (Bidirectional Encoder Representations from Transformers). BERT reads each word in the context of the whole sentence, which matters a lot for sentiment, where a single word like &amp;ldquo;not&amp;rdquo; can flip the meaning.&lt;/p&gt;
-&lt;h2 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Fine-tuned pre-trained BERT models for sentiment classification instead of training from scratch.&lt;/li&gt;
-&lt;li&gt;Prepared the text data with standard NLP preprocessing before training.&lt;/li&gt;
-&lt;li&gt;Wrote the pipeline in Python using HuggingFace Transformers and TensorFlow.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;technical-skills-acquired&#34;&gt;Technical Skills Acquired&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Python&lt;/li&gt;
-&lt;li&gt;Natural Language Processing (NLP)&lt;/li&gt;
-&lt;li&gt;BERT&lt;/li&gt;
-&lt;li&gt;Machine Learning&lt;/li&gt;
-&lt;li&gt;Data Preprocessing&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Experience</title>
-      <link>http://localhost:1313/experience/</link>
-      <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/experience/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Car Price Prediction Using Machine Learning Techniques</title>
-      <link>http://localhost:1313/project/car-price/</link>
-      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/car-price/</guid>
-      <description>&lt;p&gt;In this project I helped build a machine learning model that predicts the price of a car from a wide range of its features.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Multiclass Image Classification using Transfer Learning</title>
-      <link>http://localhost:1313/project/image-classification/</link>
-      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/image-classification/</guid>
-      <description>&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt;
-&lt;p&gt;I built a multiclass image classifier on top of InceptionResNetV2. Rather than training a large network from scratch, I started from a pre-trained model and reused what it had already learned, then trained it to recognize my own set of classes.&lt;/p&gt;
-&lt;h2 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Used InceptionResNetV2 as the base model and adapted it to the target classes through transfer learning.&lt;/li&gt;
-&lt;li&gt;Added data augmentation and input normalization so the model would do better on images it had not seen during training.&lt;/li&gt;
-&lt;li&gt;Wrote the full training and evaluation pipeline in Python.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;technical-skills-acquired&#34;&gt;Technical Skills Acquired&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Python&lt;/li&gt;
-&lt;li&gt;Deep Learning&lt;/li&gt;
-&lt;li&gt;Transfer Learning&lt;/li&gt;
-&lt;li&gt;Computer Vision&lt;/li&gt;
-&lt;li&gt;Data Augmentation&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Adaptive Irrigated Agriculture Monitoring (Embedded &#43; Cloud)</title>
-      <link>http://localhost:1313/project/irrigation-monitoring/</link>
-      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/irrigation-monitoring/</guid>
-      <description>&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt;
-&lt;p&gt;This was an IoT system for keeping track of conditions in the field. Embedded sensor nodes measured soil and air conditions and sent the readings to the cloud in real time, so irrigation could follow what the crop actually needed instead of a fixed schedule.&lt;/p&gt;
-&lt;h2 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Built the embedded sensor setup that reads soil and air conditions.&lt;/li&gt;
-&lt;li&gt;Connected the sensor nodes to the cloud for real-time monitoring.&lt;/li&gt;
-&lt;li&gt;Used the incoming data to decide when and how much to irrigate.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;technical-skills-acquired&#34;&gt;Technical Skills Acquired&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Embedded Systems&lt;/li&gt;
-&lt;li&gt;IoT&lt;/li&gt;
-&lt;li&gt;Sensors&lt;/li&gt;
-&lt;li&gt;Cloud Integration&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/</link><atom:link href="https://bilalsarwar071.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Muhammad Bilal Sarwar</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate><image><url>https://bilalsarwar071.github.io/media/icon_hu_ef8be4a73e75cc6b.png</url><title>Muhammad Bilal Sarwar</title><link>https://bilalsarwar071.github.io/</link></image><item><title>Formal Verification of Lane-Changing Algorithms</title><link>https://bilalsarwar071.github.io/project/lane-changing-verification/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/lane-changing-verification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>System Analysis and Verification (SAVe) Lab, SEECS, NUST&lt;/strong>&lt;br>
+&lt;em>Jan 2024 - Jan 2025&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>Lane changing is one of the most complex things an autonomous vehicle does, and it is usually checked in simulation, which can miss rare corner cases. For my MS thesis I analyzed lane-changing algorithms formally instead, so the results hold for every behavior the model allows, not just the runs we happened to simulate.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Modeled the MOBIL lane-changing algorithm together with the Intelligent Driver Model as a Markov Decision Process.&lt;/li>
+&lt;li>Wrote safety, lane-change efficiency, timing and robustness requirements in PCTL and checked them with the PRISM probabilistic model checker.&lt;/li>
+&lt;li>Built the model from generic parts, so other lane-changing algorithms can be plugged into the same framework.&lt;/li>
+&lt;li>The work was published in the Journal of Signal Processing Systems in 2026.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Probabilistic Model Checking&lt;/li>
+&lt;li>PRISM&lt;/li>
+&lt;li>Markov Decision Processes&lt;/li>
+&lt;li>PCTL&lt;/li>
+&lt;/ul></description></item><item><title>LLM-Guided Heuristics for SAT Solvers</title><link>https://bilalsarwar071.github.io/project/llm-sat-heuristics/</link><pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/llm-sat-heuristics/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>System Analysis and Verification (SAVe) Lab, SEECS, NUST&lt;/strong>&lt;br>
+&lt;em>Jun 2025 - Present&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>SAT solvers depend on carefully tuned heuristics. In this project I look at whether large language models can help design them, without fine-tuning the model itself. A lot of recent work lets the model reflect on its earlier attempts, so we also asked a simple question: does that reflection actually help?&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Developing neuro-symbolic frameworks that combine LLMs with SAT solver heuristics.&lt;/li>
+&lt;li>Ran a placebo-controlled study to test whether LLM reflection really improves the heuristics it produces.&lt;/li>
+&lt;li>Evolved phase-initialisation heuristics for CaDiCaL. The best ones ran 48% faster on the DFVS benchmarks and 37% faster on the decision-tree benchmarks than the best default setup.&lt;/li>
+&lt;li>The manuscript is complete, with Osman Hasan and S. Abed.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>SAT Solving&lt;/li>
+&lt;li>CaDiCaL&lt;/li>
+&lt;li>Large Language Models&lt;/li>
+&lt;li>Experimental Design&lt;/li>
+&lt;/ul></description></item><item><title>OpenStack GPU Cloud for Precision Agriculture</title><link>https://bilalsarwar071.github.io/project/openstack-gpu-cloud/</link><pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/openstack-gpu-cloud/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>GreenAI (Precision Agriculture), HPC Department, NASTP, Rawalpindi&lt;/strong>&lt;br>
+&lt;em>Feb 2026 - Present&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>GreenAI&amp;rsquo;s precision agriculture teams and its IaaS clients needed a place to run their workloads, including GPU-heavy ones. I built that platform and now look after it.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Deployed OpenStack across more than 20 bare metal nodes using MAAS, Sunbeam, Juju, MicroCeph and OVN.&lt;/li>
+&lt;li>Set up Kubernetes with GPU passthrough and provisioned GPU virtual machines for internal teams and clients.&lt;/li>
+&lt;li>Moved vendor-provided and in-house applications from testing into a secure production environment, with CI/CD pipelines, rollback procedures and automated nightly backups.&lt;/li>
+&lt;li>Lead the HPC administration team, review configuration changes and plan the 24/7 shift roster.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>OpenStack&lt;/li>
+&lt;li>Kubernetes&lt;/li>
+&lt;li>Ceph and OVN&lt;/li>
+&lt;li>CI/CD&lt;/li>
+&lt;/ul></description></item><item><title>Out-of-Distribution Detection in Encrypted Video Traffic</title><link>https://bilalsarwar071.github.io/project/encrypted-traffic-ood/</link><pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/encrypted-traffic-ood/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>Data Science &amp;amp; Machine Learning Lab, SINES, NUST&lt;/strong>&lt;br>
+&lt;em>Feb 2025 - May 2025&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>Video traffic is encrypted, so a classifier only sees patterns in the packets, not the content. It also needs to notice when traffic does not look like anything it was trained on, instead of confidently guessing. I led the lab&amp;rsquo;s project on this out-of-distribution (OOD) detection problem for encrypted YouTube traffic.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Designed the data pipelines and the deep learning models.&lt;/li>
+&lt;li>Wrote the first draft of the paper, &amp;ldquo;Unified Framework for YouTube Traffic Classification and Out-of-Distribution Detection in Encrypted Networks&amp;rdquo;, which the lab plans to resubmit.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Deep Learning&lt;/li>
+&lt;li>Out-of-Distribution Detection&lt;/li>
+&lt;li>Network Traffic Analysis&lt;/li>
+&lt;/ul></description></item><item><title>IoT Monitoring of Dengue and Zika Mosquitoes</title><link>https://bilalsarwar071.github.io/project/dengue-iot-monitoring/</link><pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/dengue-iot-monitoring/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>Geo Visual Analytics Lab, IGIS, NUST&lt;/strong>&lt;br>
+&lt;em>May 2023 - Dec 2023&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>Dengue and Zika are spread by mosquitoes, and knowing where those mosquitoes are helps predict where an outbreak is likely. This project built an IoT system to monitor them automatically.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Built the real-time data collection setup on Raspberry Pi devices.&lt;/li>
+&lt;li>Used OpenCV and machine learning to detect mosquitoes in the captured images.&lt;/li>
+&lt;li>Ran a four-week workshop on Python for computer vision.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Raspberry Pi&lt;/li>
+&lt;li>OpenCV&lt;/li>
+&lt;li>Machine Learning&lt;/li>
+&lt;li>IoT&lt;/li>
+&lt;/ul></description></item><item><title>Interactive Formal Verification Lab</title><link>https://bilalsarwar071.github.io/playground/</link><pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/playground/</guid><description>&lt;p>I built these three tools to show how some of the ideas I work with actually behave. They are small, but they are real: the model checker explores every reachable state and checks your formula with the standard labelling algorithm, and the verifier computes weakest preconditions for whatever conditions you type in. Everything runs in your browser, so feel free to break things.&lt;/p>
+&lt;link rel="stylesheet" href="https://bilalsarwar071.github.io/css/fv_playground.css?v=e248c122">
+&lt;div class="fv-playground-wrapper not-prose" id="fv-lab">
+&lt;div class="fv-tabs" role="tablist">
+&lt;button type="button" class="fv-tab-btn active" role="tab" aria-selected="true" data-tab="sat-solver">
+&lt;span class="tab-icon">⚡&lt;/span> DPLL SAT Solver
+&lt;/button>
+&lt;button type="button" class="fv-tab-btn" role="tab" aria-selected="false" data-tab="model-checker">
+&lt;span class="tab-icon">🛡️&lt;/span> CTL Model Checker
+&lt;/button>
+&lt;button type="button" class="fv-tab-btn" role="tab" aria-selected="false" data-tab="hoare-logic">
+&lt;span class="tab-icon">🔍&lt;/span> Hoare Logic Verifier
+&lt;/button>
+&lt;/div>
+&lt;div class="fv-card">
+&lt;div id="sat-solver" class="fv-tab-content active" role="tabpanel">
+&lt;div class="fv-grid">
+&lt;div class="fv-control-panel">
+&lt;h3 class="panel-title">Solver Controls&lt;/h3>
+&lt;div class="form-group">
+&lt;label for="sat-presets">Formula&lt;/label>
+&lt;select id="sat-presets">
+&lt;option value="sat-simple">Satisfiable: (A ∨ B) ∧ (¬A ∨ C) ∧ (¬B ∨ ¬C)&lt;/option>
+&lt;option value="unsat-simple">Unsatisfiable: all four clauses over A and B&lt;/option>
+&lt;option value="chain">Implication chain: refuted by propagation alone&lt;/option>
+&lt;option value="php-3-2">Pigeonhole: 3 pigeons, 2 holes (unsatisfiable)&lt;/option>
+&lt;option value="custom">Write your own CNF formula...&lt;/option>
+&lt;/select>
+&lt;/div>
+&lt;div id="sat-custom-container" class="form-group hidden">
+&lt;label for="sat-custom-input">Your formula in CNF&lt;/label>
+&lt;input type="text" id="sat-custom-input" class="mono-input" placeholder="(A | B) &amp; (~A | C) &amp; (~B | ~C)" spellcheck="false" autocomplete="off">
+&lt;p class="hint-text">Join clauses with &amp;amp; and literals with |. Negate with ~ or !. Up to 12 variables.&lt;/p>
+&lt;div id="sat-parse-error" class="error-text">&lt;/div>
+&lt;/div>
+&lt;div class="control-buttons">
+&lt;button type="button" class="btn btn-primary" id="btn-sat-solve">Solve&lt;/button>
+&lt;button type="button" class="btn btn-secondary" id="btn-sat-step">Step&lt;/button>
+&lt;button type="button" class="btn btn-accent" id="btn-sat-run">Auto run&lt;/button>
+&lt;button type="button" class="btn btn-danger" id="btn-sat-reset">Reset&lt;/button>
+&lt;/div>
+&lt;div class="speed-control">
+&lt;label for="sat-speed">Auto run speed&lt;/label>
+&lt;input type="range" id="sat-speed" min="100" max="2000" value="700" step="100">
+&lt;span class="speed-label">&lt;/span>
+&lt;/div>
+&lt;div>
+&lt;h4 class="sub-panel-title">Assignment&lt;/h4>
+&lt;div id="sat-assignments" class="assignment-list">&lt;/div>
+&lt;/div>
+&lt;div class="console-panel">
+&lt;h4 class="sub-panel-title">Solver log&lt;/h4>
+&lt;div id="sat-logs" class="console-log" aria-live="polite">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="fv-visual-panel">
+&lt;div class="panel-header-toolbar">
+&lt;span class="panel-subtitle">Clauses and search tree&lt;/span>
+&lt;span id="sat-status" class="badge badge-neutral">IDLE&lt;/span>
+&lt;/div>
+&lt;div id="sat-stats" class="stats-row">&lt;/div>
+&lt;div>
+&lt;h4 class="sub-panel-title">Clauses&lt;/h4>
+&lt;div id="sat-formula-clauses" class="clause-box">&lt;/div>
+&lt;/div>
+&lt;div class="tree-container">
+&lt;h4 class="sub-panel-title">Search tree&lt;/h4>
+&lt;div class="tree-canvas-wrapper">
+&lt;svg id="sat-tree-svg" viewBox="0 0 500 260" preserveAspectRatio="xMidYMin meet" role="img" aria-label="DPLL search tree">&lt;/svg>
+&lt;/div>
+&lt;/div>
+&lt;div class="legend-box">
+&lt;span class="legend-item">&lt;span class="legend-shape legend-circle">&lt;/span> Decision&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-shape legend-diamond">&lt;/span> Forced by unit propagation&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color conflict-color">&lt;/span> Conflict or dead end&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color sat-color">&lt;/span> Satisfying path&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div id="model-checker" class="fv-tab-content" role="tabpanel">
+&lt;div class="fv-grid">
+&lt;div class="fv-control-panel">
+&lt;h3 class="panel-title">Model Checking&lt;/h3>
+&lt;div class="form-group">
+&lt;label for="mc-system">System&lt;/label>
+&lt;select id="mc-system">
+&lt;option value="peterson">Peterson's mutual exclusion&lt;/option>
+&lt;option value="flags-only">Flags only, no turn variable&lt;/option>
+&lt;option value="naive-lock">Naive lock: check first, then set&lt;/option>
+&lt;option value="traffic">Traffic light controller&lt;/option>
+&lt;/select>
+&lt;p id="mc-blurb" class="hint-text">&lt;/p>
+&lt;/div>
+&lt;div class="form-group">
+&lt;label for="mc-property">CTL property&lt;/label>
+&lt;select id="mc-property">&lt;/select>
+&lt;input type="text" id="mc-custom" class="mono-input hidden" spellcheck="false" autocomplete="off" aria-label="Custom CTL formula">
+&lt;div id="mc-error" class="error-text">&lt;/div>
+&lt;details class="syntax-help">
+&lt;summary>Formula syntax&lt;/summary>
+&lt;p>Atoms compare a variable with a value, like &lt;code>pc0 = WAIT&lt;/code> or &lt;code>turn != 1&lt;/code>. Booleans can stand alone, like &lt;code>flag0&lt;/code> or &lt;code>deadlock&lt;/code>.&lt;/p>
+&lt;p>Connectives: &lt;code>!&lt;/code> &lt;code>&amp;amp;&lt;/code> &lt;code>|&lt;/code> &lt;code>-&amp;gt;&lt;/code> &lt;code>&amp;lt;-&amp;gt;&lt;/code>. Temporal operators: &lt;code>AX EX AF EF AG EG&lt;/code>, plus &lt;code>A[p U q]&lt;/code> and &lt;code>E[p U q]&lt;/code>.&lt;/p>
+&lt;/details>
+&lt;/div>
+&lt;div class="control-buttons">
+&lt;button type="button" class="btn btn-primary" id="btn-mc-verify">Verify&lt;/button>
+&lt;button type="button" class="btn btn-secondary" id="btn-mc-step">Step&lt;/button>
+&lt;button type="button" class="btn btn-accent" id="btn-mc-simulate">Simulate&lt;/button>
+&lt;button type="button" class="btn btn-danger" id="btn-mc-reset">Reset&lt;/button>
+&lt;/div>
+&lt;div class="speed-control">
+&lt;label for="mc-speed">Simulation speed&lt;/label>
+&lt;input type="range" id="mc-speed" min="100" max="1500" value="600" step="100">
+&lt;span class="speed-label">&lt;/span>
+&lt;/div>
+&lt;div id="mc-verdict" class="verdict-box hidden" aria-live="polite">&lt;/div>
+&lt;div>
+&lt;h4 class="sub-panel-title">Current state: &lt;span id="mc-current-name">S0&lt;/span>&lt;/h4>
+&lt;div id="mc-state-vars" class="state-variables">&lt;/div>
+&lt;div id="mc-moves" class="moves-list">&lt;/div>
+&lt;/div>
+&lt;div class="console-panel">
+&lt;h4 class="sub-panel-title">Model checker log&lt;/h4>
+&lt;div id="mc-logs" class="console-log" aria-live="polite">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="fv-visual-panel">
+&lt;div class="panel-header-toolbar">
+&lt;span class="panel-subtitle">Reachable states&lt;/span>
+&lt;span id="mc-status" class="badge badge-neutral">IDLE&lt;/span>
+&lt;/div>
+&lt;div class="kripke-container">
+&lt;div class="graph-canvas-wrapper">
+&lt;svg id="mc-graph-svg" viewBox="0 0 550 450" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Kripke structure of the selected system">&lt;/svg>
+&lt;/div>
+&lt;p class="hint-text">Hover a state or an arrow for details. Click a state one step away from the current one to move there.&lt;/p>
+&lt;/div>
+&lt;div class="legend-box">
+&lt;span class="legend-item">&lt;span class="legend-color init-color">&lt;/span> Initial state&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color sat-color">&lt;/span> Satisfies the formula&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color current-color">&lt;/span> Current state&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color counter-color">&lt;/span> Counterexample&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color witness-color">&lt;/span> Witness&lt;/span>
+&lt;span class="legend-item">&lt;span class="legend-color deadlock-color">&lt;/span> Deadlock&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div id="hoare-logic" class="fv-tab-content" role="tabpanel">
+&lt;div class="fv-grid">
+&lt;div class="fv-control-panel">
+&lt;h3 class="panel-title">Program Verification&lt;/h3>
+&lt;div class="form-group">
+&lt;label for="hl-presets">Program&lt;/label>
+&lt;select id="hl-presets">
+&lt;option value="abs">Absolute value&lt;/option>
+&lt;option value="swap">Swap two variables (has a bug)&lt;/option>
+&lt;option value="sum">Sum of 1 to N (loop)&lt;/option>
+&lt;option value="div">Integer division (loop)&lt;/option>
+&lt;/select>
+&lt;p id="hl-hint" class="hint-text">&lt;/p>
+&lt;/div>
+&lt;div class="form-group">
+&lt;label for="hl-pre">Precondition P&lt;/label>
+&lt;input type="text" id="hl-pre" class="mono-input" spellcheck="false" autocomplete="off">
+&lt;/div>
+&lt;div class="form-group" id="hl-inv-group">
+&lt;label for="hl-inv">Loop invariant I&lt;/label>
+&lt;input type="text" id="hl-inv" class="mono-input" spellcheck="false" autocomplete="off">
+&lt;/div>
+&lt;div class="form-group">
+&lt;label for="hl-post">Postcondition Q&lt;/label>
+&lt;input type="text" id="hl-post" class="mono-input" spellcheck="false" autocomplete="off">
+&lt;/div>
+&lt;div id="hl-error" class="error-text">&lt;/div>
+&lt;div class="control-buttons">
+&lt;button type="button" class="btn btn-primary" id="btn-hl-check">Check VCs&lt;/button>
+&lt;button type="button" class="btn btn-secondary" id="btn-hl-step">Step&lt;/button>
+&lt;button type="button" class="btn btn-danger btn-wide" id="btn-hl-reset">Reset&lt;/button>
+&lt;/div>
+&lt;div class="console-panel">
+&lt;h4 class="sub-panel-title">Weakest precondition trace&lt;/h4>
+&lt;div id="hl-logs" class="console-log tall" aria-live="polite">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="fv-visual-panel">
+&lt;div class="panel-header-toolbar">
+&lt;span class="panel-subtitle">Annotated program and verification conditions&lt;/span>
+&lt;span id="hl-status" class="badge badge-neutral">IDLE&lt;/span>
+&lt;/div>
+&lt;div class="code-verification-grid">
+&lt;div class="code-editor-mock">
+&lt;h4 class="sub-panel-title">Program&lt;/h4>
+&lt;div id="hl-code-display" class="code-lines-box">&lt;/div>
+&lt;/div>
+&lt;div class="vc-proof-panel">
+&lt;h4 class="sub-panel-title">Verification conditions&lt;/h4>
+&lt;div id="hl-vc-list" class="vc-list-box">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p class="hint-text">VCs are checked by trying every integer combination in a small range, so a pass is strong evidence rather than a proof. Only partial correctness is checked here, not termination.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;script src="https://bilalsarwar071.github.io/js/fv_playground.js?v=806596df">&lt;/script>
+&lt;h2 id="what-you-are-looking-at">What you are looking at&lt;/h2>
+&lt;p>&lt;strong>DPLL SAT solver.&lt;/strong> A SAT solver decides whether a propositional formula has a satisfying assignment. DPLL guesses a value for one variable, follows every consequence it is forced into (unit propagation), and backtracks when a clause becomes false. The tree shows guesses as circles and forced assignments as diamonds. The pigeonhole example is worth stepping through: you cannot put three pigeons into two holes without two of them sharing, and the solver has to rule out every option before it can say so.&lt;/p>
+&lt;p>&lt;strong>CTL model checker.&lt;/strong> The four systems are written as small guarded-command programs. The checker builds every reachable state from them, then works out which states satisfy each part of your formula, from the inside out. Press Step to watch that happen one subformula at a time. When a property fails you get a counterexample run, and for properties like EF you get a witness. Peterson&amp;rsquo;s algorithm passes everything. Remove the turn variable and it still keeps the processes apart, but it can deadlock. The naive lock fails at the most basic job, and the checker shows you the exact interleaving that breaks it.&lt;/p>
+&lt;p>&lt;strong>Hoare logic verifier.&lt;/strong> A Hoare triple {P} S {Q} says that if P holds before program S runs, then Q holds after it. The verifier works backwards from Q, computing the weakest precondition of each statement, and turns the result into verification conditions (VCs). Loops need an invariant, which you provide. You can edit any of the conditions. Try weakening an invariant and see which VC breaks, and what counterexample it gives you.&lt;/p>
+&lt;h2 id="why-this-matters">Why this matters&lt;/h2>
+&lt;p>Testing can show that a program works on the inputs you tried. Formal verification aims to show that it works on all of them, or to find the case where it does not. That is why these ideas show up wherever failures are expensive: hardware design, operating system kernels like seL4, flight software and communication protocols. Real tools are far more capable than these toys, but the core ideas are the same.&lt;/p></description></item><item><title>Formal Analysis of Lane-Changing Algorithms using Probabilistic Model Checking</title><link>https://bilalsarwar071.github.io/publication/lane-changing-model-checking/</link><pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/publication/lane-changing-model-checking/</guid><description/></item><item><title>Revolutionizing ICT with AI and ML: A Comprehensive Study of Current Applications and Future Potential</title><link>https://bilalsarwar071.github.io/publication/journal-article/</link><pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/publication/journal-article/</guid><description/></item><item><title>Projects</title><link>https://bilalsarwar071.github.io/projects/</link><pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/projects/</guid><description/></item><item><title>Text Categorization Using Encoder only Transformer</title><link>https://bilalsarwar071.github.io/project/text-classification/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/text-classification/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
+&lt;em>Dec 2023 - Jan 2024&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>The goal here was to sort text into a fixed set of categories automatically. I used an encoder-only transformer, the same family as BERT, because it builds a representation of the whole input, which suits classification well.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Built a text categorization model on an encoder-only transformer architecture.&lt;/li>
+&lt;li>Evaluated and fine-tuned the model so it categorized a varied mix of text reliably.&lt;/li>
+&lt;li>Implemented everything in Python with Hugging Face Transformers and scikit-learn.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Python&lt;/li>
+&lt;li>Natural Language Processing (NLP)&lt;/li>
+&lt;li>Transformers&lt;/li>
+&lt;li>Text Classification&lt;/li>
+&lt;li>Machine Learning&lt;/li>
+&lt;/ul></description></item><item><title>Sentiment Analysis Using BERT</title><link>https://bilalsarwar071.github.io/project/sentiment-analysis/</link><pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/sentiment-analysis/</guid><description>&lt;h2 id="institution">Institution&lt;/h2>
+&lt;p>&lt;strong>National University of Sciences and Technology, Islamabad, Pakistan&lt;/strong>&lt;br>
+&lt;em>Oct 2023 - Dec 2023&lt;/em>&lt;/p>
+&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>For this project I built a sentiment classifier using BERT (Bidirectional Encoder Representations from Transformers). BERT reads each word in the context of the whole sentence, which matters a lot for sentiment, where a single word like &amp;ldquo;not&amp;rdquo; can flip the meaning.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Fine-tuned pre-trained BERT models for sentiment classification instead of training from scratch.&lt;/li>
+&lt;li>Prepared the text data with standard NLP preprocessing before training.&lt;/li>
+&lt;li>Wrote the pipeline in Python using HuggingFace Transformers and TensorFlow.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Python&lt;/li>
+&lt;li>Natural Language Processing (NLP)&lt;/li>
+&lt;li>BERT&lt;/li>
+&lt;li>Machine Learning&lt;/li>
+&lt;li>Data Preprocessing&lt;/li>
+&lt;/ul></description></item><item><title>Experience</title><link>https://bilalsarwar071.github.io/experience/</link><pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/experience/</guid><description/></item><item><title>Car Price Prediction Using Machine Learning Techniques</title><link>https://bilalsarwar071.github.io/project/car-price/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/car-price/</guid><description>&lt;p>In this project I helped build a machine learning model that predicts the price of a car from a wide range of its features.&lt;/p></description></item><item><title>Multiclass Image Classification using Transfer Learning</title><link>https://bilalsarwar071.github.io/project/image-classification/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/image-classification/</guid><description>&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>I built a multiclass image classifier on top of InceptionResNetV2. Rather than training a large network from scratch, I started from a pre-trained model and reused what it had already learned, then trained it to recognize my own set of classes.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Used InceptionResNetV2 as the base model and adapted it to the target classes through transfer learning.&lt;/li>
+&lt;li>Added data augmentation and input normalization so the model would do better on images it had not seen during training.&lt;/li>
+&lt;li>Wrote the full training and evaluation pipeline in Python.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Python&lt;/li>
+&lt;li>Deep Learning&lt;/li>
+&lt;li>Transfer Learning&lt;/li>
+&lt;li>Computer Vision&lt;/li>
+&lt;li>Data Augmentation&lt;/li>
+&lt;/ul></description></item><item><title>Adaptive Irrigated Agriculture Monitoring (Embedded + Cloud)</title><link>https://bilalsarwar071.github.io/project/irrigation-monitoring/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://bilalsarwar071.github.io/project/irrigation-monitoring/</guid><description>&lt;h2 id="project-description">Project Description&lt;/h2>
+&lt;p>This was an IoT system for keeping track of conditions in the field. Embedded sensor nodes measured soil and air conditions and sent the readings to the cloud in real time, so irrigation could follow what the crop actually needed instead of a fixed schedule.&lt;/p>
+&lt;h2 id="project-highlights">Project Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Built the embedded sensor setup that reads soil and air conditions.&lt;/li>
+&lt;li>Connected the sensor nodes to the cloud for real-time monitoring.&lt;/li>
+&lt;li>Used the incoming data to decide when and how much to irrigate.&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-skills-acquired">Technical Skills Acquired&lt;/h2>
+&lt;ul>
+&lt;li>Embedded Systems&lt;/li>
+&lt;li>IoT&lt;/li>
+&lt;li>Sensors&lt;/li>
+&lt;li>Cloud Integration&lt;/li>
+&lt;/ul></description></item></channel></rss>
